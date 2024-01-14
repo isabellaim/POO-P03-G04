@@ -14,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 /**
@@ -106,6 +107,11 @@ public class MenuPrincipalController implements Initializable {
         } catch(FileNotFoundException e){
             System.out.println("No se encontró el archivo de la imagen.");
         }
-    }    
+    }
+    
+    @FXML
+    private void clickAdministracionStands() throws IOException {
+        App.setRoot("administracionStands");
+    }
     
 }
