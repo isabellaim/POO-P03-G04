@@ -6,29 +6,27 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane fx:id="bpPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectop03g04.MenuPrincipalController">
+<BorderPane fx:id="bpPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="990.0" prefWidth="1710.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectop03g04.MenuPrincipalController">
 <top>
-      <HBox fx:id="hbHeading" alignment="CENTER" prefHeight="84.0" prefWidth="600.0" spacing="50.0" style="-fx-background-color: lavender;" BorderPane.alignment="CENTER">
+      <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="170.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" spacing="200.0" style="-fx-background-color: lavender;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="63.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgHeader1" fitHeight="123.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../../../Programación%20Orientada%20a%20Objetos/POO-P03-G04/src/main/resources/ec/edu/espol/imágenes/feria.png" />
+                  <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/feria.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" prefHeight="49.0" prefWidth="250.0" text="Gestión de Ferias" textAlignment="CENTER" textOverrun="CLIP">
+            <Label alignment="CENTER" prefHeight="98.0" prefWidth="811.0" text="Gestión de Ferias" textAlignment="CENTER" textOverrun="CLIP">
                <font>
-                  <Font name="October Tamil Heavy" size="22.0" />
+                  <Font name="October Tamil Heavy" size="48.0" />
                </font>
             </Label>
-            <ImageView fitHeight="63.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgHeader2" fitHeight="123.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../../../Programación%20Orientada%20a%20Objetos/POO-P03-G04/src/main/resources/ec/edu/espol/imágenes/rueda-de-la-fortuna.png" />
+                  <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/rueda-de-la-fortuna.png" />
                </image>
             </ImageView>
          </children>
@@ -37,83 +35,83 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Line endX="499.79290771484375" endY="0.2928932309150696" startX="-100.0" stroke="#5700a8" strokeWidth="3.0" />
-            <HBox alignment="CENTER" prefHeight="156.0" prefWidth="605.0" spacing="5.0" style="-fx-background-color: white;">
+            <Line endX="1710.0" stroke="#5700a8" strokeWidth="5.0" />
+            <HBox alignment="CENTER" maxHeight="410.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="1710.0" spacing="100.0" style="-fx-background-color: white;">
                <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
                      <children>
-                        <ImageView fitHeight="65.0" fitWidth="71.0" layoutX="65.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgAdminFeria" fitHeight="150.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Programación%20Orientada%20a%20Objetos/POO-P03-G04/src/main/resources/ec/edu/espol/imágenes/parque-tematico.png" />
+                              <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/parque-tematico.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminFeria" alignment="CENTER" layoutX="9.0" layoutY="101.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="177.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Ferias" textFill="WHITE">
+                        <Button fx:id="btnAdminFeria" alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Ferias" textFill="WHITE">
                            <font>
-                              <Font name="October Tamil Regular" size="11.0" />
+                              <Font name="October Tamil Bold" size="24.0" />
                            </font>
                         </Button>
                      </children>
-                  </Pane>
-                  <Pane layoutX="190.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
                      <children>
-                        <ImageView fitHeight="65.0" fitWidth="71.0" layoutX="63.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgAdminEmpre" fitHeight="150.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Programación%20Orientada%20a%20Objetos/POO-P03-G04/src/main/resources/ec/edu/espol/imágenes/grupo.png" />
+                              <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/grupo.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminEmpre" alignment="CENTER" layoutY="101.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="195.0" style="-fx-background-color: indigo;" text="Administración de Emprendedores" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Button fx:id="btnAdminEmpre" alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" text="Administración de Emprendedores" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
-                              <Font name="October Tamil Regular" size="11.0" />
+                              <Font name="October Tamil Bold" size="24.0" />
                            </font>
                         </Button>
                      </children>
-                  </Pane>
-                  <Pane layoutX="190.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
                      <children>
-                        <ImageView fitHeight="65.0" fitWidth="71.0" layoutX="66.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgAdminAus" fitHeight="150.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Programación%20Orientada%20a%20Objetos/POO-P03-G04/src/main/resources/ec/edu/espol/imágenes/lucha.png" />
+                              <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/lucha.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminAus" alignment="CENTER" layoutX="9.0" layoutY="101.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="177.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Auspiciantes" textFill="WHITE">
+                        <Button fx:id="btnAdminAus" alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Auspiciantes" textFill="WHITE">
                            <font>
-                              <Font name="October Tamil Regular" size="11.0" />
+                              <Font name="October Tamil Bold" size="24.0" />
                            </font>
                         </Button>
                      </children>
-                  </Pane>
+                  </VBox>
                </children>
             </HBox>
-            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="156.0" prefWidth="605.0" spacing="25.0" style="-fx-background-color: white;">
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="410.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="1710.0" spacing="200.0" style="-fx-background-color: white;">
                <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
                      <children>
-                        <ImageView fitHeight="65.0" fitWidth="71.0" layoutX="63.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgAdminStands" fitHeight="150.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Programación%20Orientada%20a%20Objetos/POO-P03-G04/src/main/resources/ec/edu/espol/imágenes/feria%20(1).png" />
+                              <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/feria%20(1).png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminStands" alignment="CENTER" layoutX="17.0" layoutY="101.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="156.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Stands" textFill="WHITE">
+                        <Button fx:id="btnAdminStands" alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Stands" textFill="WHITE">
                            <font>
-                              <Font name="October Tamil Regular" size="11.0" />
+                              <Font name="October Tamil Bold" size="24.0" />
                            </font>
                         </Button>
                      </children>
-                  </Pane>
-                  <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
                      <children>
-                        <ImageView fitHeight="65.0" fitWidth="71.0" layoutX="63.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgSalir" fitHeight="150.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Programación%20Orientada%20a%20Objetos/POO-P03-G04/src/main/resources/ec/edu/espol/imágenes/salida.png" />
+                              <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/salida.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnSalir" alignment="CENTER" layoutX="17.0" layoutY="101.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="156.0" style="-fx-background-color: indigo;" text="Salir" textFill="WHITE">
+                        <Button fx:id="btnSalir" alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" text="Salir" textFill="WHITE">
                            <font>
-                              <Font name="October Tamil Regular" size="11.0" />
+                              <Font name="October Tamil Bold" size="24.0" />
                            </font>
                         </Button>
                      </children>
-                  </Pane>
+                  </VBox>
                </children>
             </HBox>
          </children>
