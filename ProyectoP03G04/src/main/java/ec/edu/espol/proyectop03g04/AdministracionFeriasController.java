@@ -9,38 +9,36 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
  *
  * @author isabella
  */
-public class AdministracionStandsController implements Initializable {
+public class AdministracionFeriasController implements Initializable {
 
+    /**
+     * Initializes the controller class.
+     */
     @FXML
     private BorderPane bpAdminStands;
     @FXML
     private HBox hbHeading;
     @FXML
-    private ImageView imgHeader2;
-    @FXML
-    private ImageView imgAntesMostrarStands;
-    @FXML
     private Button btnRegresar;
     @FXML
-    private TextField tfCodigoFeria;
-
-    /**
-     * Initializes the controller class.
-     */
+    private ImageView imgHeader2;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try{
@@ -48,18 +46,12 @@ public class AdministracionStandsController implements Initializable {
             imgHeader2.setImage(img1);
         } catch(FileNotFoundException e){
             System.out.println("No se encontró el archivo de la imagen.");
-        }
-        
-        try{
-            Image img2 = new Image(new FileInputStream("src/main/resources/imágenes/globos.png"));
-            imgAntesMostrarStands.setImage(img2);
-        } catch(FileNotFoundException e){
-            System.out.println("No se encontró el archivo de la imagen.");
-        }   
+        }  
     }    
     
     @FXML
     private void clickRegresar() throws IOException {
         App.setRoot("menuPrincipal");
     }
+    
 }

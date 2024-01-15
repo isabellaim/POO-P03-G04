@@ -114,4 +114,9 @@ public class MenuPrincipalController implements Initializable {
         App.setRoot("administracionStands");
     }
     
+    @FXML
+    private void clickAdministracionFerias() throws IOException {
+        App.setRoot("administracionFerias");
+    }
+    
 }

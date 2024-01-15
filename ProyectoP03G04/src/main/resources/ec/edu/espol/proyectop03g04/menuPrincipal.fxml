@@ -11,31 +11,9 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="bpPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="990.0" prefWidth="1710.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectop03g04.MenuPrincipalController">
-<top>
-      <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="170.0" maxWidth="2000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" spacing="150.0" style="-fx-background-color: lavender;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fx:id="imgHeader1" fitHeight="123.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/feria.png" />
-               </image>
-            </ImageView>
-            <Label alignment="CENTER" prefHeight="98.0" prefWidth="811.0" text="Gestión de Ferias" textAlignment="CENTER" textOverrun="CLIP">
-               <font>
-                  <Font name="October Tamil Heavy" size="48.0" />
-               </font>
-            </Label>
-            <ImageView fx:id="imgHeader2" fitHeight="123.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/rueda-de-la-fortuna.png" />
-               </image>
-            </ImageView>
-         </children>
-      </HBox>
-   </top>
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Line endX="1710.0" stroke="INDIGO" strokeWidth="5.0" />
             <HBox alignment="CENTER" maxHeight="410.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="1710.0" spacing="100.0" style="-fx-background-color: white;">
                <children>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
@@ -45,7 +23,7 @@
                               <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/parque-tematico.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminFeria" alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Ferias" textFill="WHITE">
+                        <Button fx:id="btnAdminFeria" alignment="CENTER" mnemonicParsing="false" onAction="#clickAdministracionFerias" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Ferias" textFill="WHITE">
                            <font>
                               <Font name="October Tamil Bold" size="24.0" />
                            </font>
@@ -117,4 +95,30 @@
          </children>
       </VBox>
    </center>
+   <top>
+      <VBox maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" spacing="200.0" style="-fx-background-color: lavender;">
+               <children>
+                  <ImageView fx:id="imgHeader1" fitHeight="130.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/feria.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" maxHeight="100.0" maxWidth="800.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="800.0" text="Menú Principal" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                     <font>
+                        <Font name="October Tamil Heavy" size="48.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgHeader2" fitHeight="130.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/rueda-de-la-fortuna.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Line endX="1710.0" stroke="INDIGO" strokeWidth="5.0" />
+         </children>
+      </VBox>
+   </top>
 </BorderPane>
