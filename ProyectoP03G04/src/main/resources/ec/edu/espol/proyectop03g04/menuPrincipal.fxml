@@ -37,7 +37,7 @@
                               <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/grupo.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminEmpre" alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" text="Administración de Emprendedores" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Button fx:id="btnAdminEmpre" alignment="CENTER" mnemonicParsing="false" onAction="#clickAdministracionEmprendedores" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" text="Administración de Emprendedores" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="October Tamil Bold" size="24.0" />
                            </font>
@@ -51,7 +51,7 @@
                               <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/lucha.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminAus" alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Auspiciantes" textFill="WHITE">
+                        <Button fx:id="btnAdminAus" alignment="CENTER" mnemonicParsing="false" onAction="#clickAdministracionAuspiciantes" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Auspiciantes" textFill="WHITE">
                            <font>
                               <Font name="October Tamil Bold" size="24.0" />
                            </font>
@@ -98,14 +98,14 @@
    <top>
       <VBox maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" spacing="200.0" style="-fx-background-color: lavender;">
+            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" spacing="150.0" style="-fx-background-color: lavender;">
                <children>
                   <ImageView fx:id="imgHeader1" fitHeight="130.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/feria.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER" maxHeight="100.0" maxWidth="800.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="800.0" text="Menú Principal" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                  <Label alignment="CENTER" maxHeight="100.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Menú Principal" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
                      <font>
                         <Font name="October Tamil Heavy" size="48.0" />
                      </font>

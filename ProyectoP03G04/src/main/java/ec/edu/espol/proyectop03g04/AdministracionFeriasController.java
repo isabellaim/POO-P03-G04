@@ -41,12 +41,8 @@ public class AdministracionFeriasController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        try{
-            Image img1 = new Image(new FileInputStream("src/main/resources/imágenes/rueda-de-la-fortuna.png"));
-            imgHeader2.setImage(img1);
-        } catch(FileNotFoundException e){
-            System.out.println("No se encontró el archivo de la imagen.");
-        }  
+        Image img1 = new Image("/imagenes/rueda-de-la-fortuna.png");
+        imgHeader2.setImage(img1);
     }    
     
     @FXML

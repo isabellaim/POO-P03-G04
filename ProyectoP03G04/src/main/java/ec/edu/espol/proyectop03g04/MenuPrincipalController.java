@@ -59,54 +59,29 @@ public class MenuPrincipalController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        try{
-            Image img1 = new Image(new FileInputStream("src/main/resources/imágenes/feria.png"));
-            imgHeader1.setImage(img1);
-        } catch(FileNotFoundException e){
-            System.out.println("No se encontró el archivo de la imagen.");
-        }
+        Image img1 = new Image("/imagenes/feria.png");
+        imgHeader1.setImage(img1);
         
-        try{
-            Image img2 = new Image(new FileInputStream("src/main/resources/imágenes/rueda-de-la-fortuna.png"));
-            imgHeader2.setImage(img2);
-        } catch(FileNotFoundException e){
-            System.out.println("No se encontró el archivo de la imagen.");
-        }
+        Image img2 = new Image("/imagenes/rueda-de-la-fortuna.png");
+        imgHeader2.setImage(img2);
         
-        try{
-            Image img3 = new Image(new FileInputStream("src/main/resources/imágenes/parque-tematico.png"));
-            imgAdminFeria.setImage(img3);
-        } catch(FileNotFoundException e){
-            System.out.println("No se encontró el archivo de la imagen.");
-        }
         
-        try{
-            Image img4 = new Image(new FileInputStream("src/main/resources/imágenes/grupo.png"));
-            imgAdminEmpre.setImage(img4);
-        } catch(FileNotFoundException e){
-            System.out.println("No se encontró el archivo de la imagen.");
-        }
+        Image img3 = new Image("/imagenes/parque-tematico.png");
+        imgAdminFeria.setImage(img3);
         
-        try{
-            Image img5 = new Image(new FileInputStream("src/main/resources/imágenes/lucha.png"));
-            imgAdminAus.setImage(img5);
-        } catch(FileNotFoundException e){
-            System.out.println("No se encontró el archivo de la imagen.");
-        }
         
-        try{
-            Image img6 = new Image(new FileInputStream("src/main/resources/imágenes/feria (1).png"));
-            imgAdminStands.setImage(img6);
-        } catch(FileNotFoundException e){
-            System.out.println("No se encontró el archivo de la imagen.");
-        }
+        Image img4 = new Image("/imagenes/grupo.png");
+        imgAdminEmpre.setImage(img4);
         
-        try{
-            Image img7 = new Image(new FileInputStream("src/main/resources/imágenes/salida.png"));
-            imgSalir.setImage(img7);
-        } catch(FileNotFoundException e){
-            System.out.println("No se encontró el archivo de la imagen.");
-        }
+    
+        Image img5 = new Image("/imagenes/lucha.png");
+        imgAdminAus.setImage(img5);
+        
+        Image img6 = new Image("/imagenes/feria (1).png");
+        imgAdminStands.setImage(img6);
+        
+        Image img7 = new Image("/imagenes/salida.png");
+        imgSalir.setImage(img7);
     }
     
     @FXML
@@ -119,4 +94,13 @@ public class MenuPrincipalController implements Initializable {
         App.setRoot("administracionFerias");
     }
     
+    @FXML
+    private void clickAdministracionEmprendedores() throws IOException {
+        App.setRoot("administracionEmprendedores");
+    }
+    
+    @FXML
+    private void clickAdministracionAuspiciantes() throws IOException {
+        App.setRoot("administracionAuspiciantes");
+    }
 }

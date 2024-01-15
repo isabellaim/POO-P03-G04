@@ -44,14 +44,14 @@
    <top>
       <VBox maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" spacing="200.0" style="-fx-background-color: lavender;">
+            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" spacing="150.0" style="-fx-background-color: lavender;">
                <children>
                   <Button fx:id="btnRegresar" maxHeight="70.0" maxWidth="160.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="70.0" prefWidth="130.0" style="-fx-background-color: indigo;" text="Regresar" textFill="WHITE">
                      <font>
                         <Font name="October Tamil Bold" size="22.0" />
                      </font>
                   </Button>
-                  <Label alignment="CENTER" maxHeight="100.0" maxWidth="800.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="800.0" text="Administración de Stands" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                  <Label alignment="CENTER" maxHeight="100.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Administración de Stands" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
                      <font>
                         <Font name="October Tamil Heavy" size="48.0" />
                      </font>

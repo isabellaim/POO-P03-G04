@@ -9,49 +9,55 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
  *
  * @author isabella
  */
-public class AdministracionStandsController implements Initializable {
+public class AdministracionEmprendedoresController implements Initializable {
 
     @FXML
-    private BorderPane bpAdminStands;
+    private BorderPane bpAdminEmprendedores;
     @FXML
     private HBox hbHeading;
     @FXML
-    private ImageView imgHeader2;
-    @FXML
-    private ImageView imgAntesMostrarStands;
-    @FXML
     private Button btnRegresar;
     @FXML
-    private TextField tfCodigoFeria;
-
+    private ImageView imgHeader2;
+    @FXML
+    private VBox vbEmprendedores;
+    @FXML
+    private Label lblEmprendedorEscogido;
+    @FXML
+    private Button btnNuevoEmprendedor;
+    @FXML
+    private Button btnEditarEmprendedor;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        // TODO
         Image img1 = new Image("/imagenes/rueda-de-la-fortuna.png");
         imgHeader2.setImage(img1);
-        
-        Image img2 = new Image("/imagenes/globos.png");
-        imgAntesMostrarStands.setImage(img2);  
     }    
-    
+
     @FXML
     private void clickRegresar() throws IOException {
         App.setRoot("menuPrincipal");
     }
+    
+    
+    
 }
