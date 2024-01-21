@@ -66,6 +66,7 @@ public class AdministracionEmprendedoresController implements Initializable {
         // TODO
         Image img1 = new Image("/imagenes/rueda-de-la-fortuna.png");
         imgHeader2.setImage(img1);
+        this.cargarEmprendedores();
     }    
 
     @FXML
