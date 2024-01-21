@@ -79,7 +79,7 @@
             </HBox>
             <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="485.0" spacing="50.0">
                <children>
-                  <Button fx:id="btnNuevoAuspiciante" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="364.0" style="-fx-background-color: indigo;" text="Registrar Auspiciante" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <Button fx:id="btnNuevoAuspiciante" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="364.0" style="-fx-background-color: indigo;" text="Nuevo Auspiciante" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="18.0" />
                      </font>
@@ -91,7 +91,7 @@
                               <Font name="Arial Rounded MT Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lblEmprendedorEscogido" alignment="CENTER" layoutX="175.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="90.0" minWidth="-Infinity" prefWidth="190.0" text="Escoja un auspiciante" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lblAuspicianteEscogido" alignment="CENTER" layoutX="175.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="90.0" minWidth="-Infinity" prefWidth="190.0" text="Escoja un auspiciante" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Arial Rounded MT" size="24.0" />
                            </font>
