@@ -17,7 +17,8 @@ public class Auspiciante extends Persona {
     super(cedula, nombre, nombrePersona, telefono, email, direccion, sitioWeb, redesSociales);
     this.sectores = sectores;
   }
-
+  
+          
   public SC[] getValues() {
       return SC.values();
   }
