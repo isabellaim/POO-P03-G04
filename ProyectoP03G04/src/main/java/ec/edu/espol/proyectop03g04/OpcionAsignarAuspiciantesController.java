@@ -4,6 +4,8 @@
  */
 package ec.edu.espol.proyectop03g04;
 
+import excepciones.DescVacia;
+import modelo.*;
 import static ec.edu.espol.proyectop03g04.AdministracionFeriasController.codigoFeria;
 import static ec.edu.espol.proyectop03g04.AdministracionFeriasController.feriaEscogida;
 import static ec.edu.espol.proyectop03g04.AdministracionFeriasController.ferias;
@@ -25,6 +27,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -58,7 +61,6 @@ import modelo.Feria;
  */
 public class OpcionAsignarAuspiciantesController implements Initializable {
 
-    public static ArrayList<Feria> ferias = new ArrayList<>();
         
     @FXML
     private BorderPane bpAdminAuspiciantes;
@@ -71,15 +73,23 @@ public class OpcionAsignarAuspiciantesController implements Initializable {
     @FXML
     private VBox vbFerias;
     @FXML
-    private Button btnNuevoAuspiciante;
+    private Button btnGuardar;
+     @FXML
+    private Button btnCancelar;
     @FXML
     private Label lblAuspicianteEscogido;
     @FXML
     private Label lblCedula;
     @FXML
-    private Button btnEditarAuspiciante;
+    private CheckBox cbSi;
     @FXML
-    private Button btnAsignarAuspicianteFeria;
+    private CheckBox cbNo;
+    @FXML
+    private TextField taDescripcion;
+    @FXML
+    private Label lblNombreFeria;
+    
+    private boolean incluyeStand;
     /**
      * Initializes the controller class.
      */
@@ -88,10 +98,7 @@ public class OpcionAsignarAuspiciantesController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         Image img1 = new Image("/imagenes/rueda-de-la-fortuna.png");
         imgHeader2.setImage(img1);
-        feriaEscogida = null;
-        codigoFeria = null;
         this.cargarFerias();
-        
         Auspiciante auspiciante = AdministracionAuspiciantesController.auspicianteEscogido;
         lblAuspicianteEscogido.setText(auspiciante.getNombre());
         lblCedula.setText(auspiciante.getCedula());
@@ -106,6 +113,50 @@ public class OpcionAsignarAuspiciantesController implements Initializable {
         }
     }
     
+      private void verificarAsignar() throws DescVacia{
+        if(!(cbNo.isSelected() || cbSi.isSelected())){
+               throw new DescVacia("Por favor seleccione si o no");
+             } else if((taDescripcion.getText().equals(""))){
+             throw new DescVacia("Por favor llene la descripción");
+             } 
+    }
+      
+        public void mostrarAlerta(String msg) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+
+        alert.setTitle(null);
+        alert.setHeaderText("Error");
+        alert.setContentText(msg);
+        Button okButton = (Button) alert.getDialogPane().lookupButton(ButtonType.OK);
+        okButton.setOnAction(event -> {
+            System.out.println("User clicked OK");
+            try{
+                App.setRoot("opcionAsignarAuspiciante");
+            } catch(IOException e){
+                e.printStackTrace();
+            }
+        });
+        alert.showAndWait();
+    }
+      
+        public void mostrarExito(String msg) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        alert.setTitle(null);
+        alert.setHeaderText("Éxito");
+        alert.setContentText(msg);
+        Button okButton = (Button) alert.getDialogPane().lookupButton(ButtonType.OK);
+        okButton.setOnAction(event -> {
+            System.out.println("User clicked OK");
+            try{
+                App.setRoot("opcionAsignarAuspiciante");
+            } catch(IOException e){
+                e.printStackTrace();
+            }
+        });
+        alert.showAndWait();
+    }
+        
     private void cargarFerias(){
         // mostrarFerias
         ArrayList<HBox> hbs = new ArrayList<>();
@@ -204,8 +255,49 @@ public class OpcionAsignarAuspiciantesController implements Initializable {
             hb.getChildren().add(vbFeria);
             if(hb.getChildren().size()>=2){
                 index+=1;
+                
             }
+              btnSeleccionar.setOnAction(e -> {
+                feriaEscogida=feria;
+                btnGuardar.setDisable(false);
+                btnCancelar.setDisable(false);
+                cbSi.setDisable(false);
+                cbNo.setDisable(false);
+                taDescripcion.setDisable(false);
+                lblNombreFeria.setText(feria.getNombre());
+            });
+              
+            cbSi.setOnAction(e -> {
+               cbNo.setSelected(false);
+               incluyeStand = true;
+            });
             
+             cbNo.setOnAction(e -> {
+               cbSi.setSelected(false);
+               incluyeStand = false;
+            });
+             
+             btnGuardar.setOnAction(e ->{
+                try {
+                    verificarAsignar();
+                    Auspiciante auspiciante = AdministracionAuspiciantesController.auspicianteEscogido;
+                    AuspicianteEnFeria AuspicianteEnFeria = new AuspicianteEnFeria(auspiciante,taDescripcion.getText(),incluyeStand);
+                    feriaEscogida.getAuspiciantes().add(AuspicianteEnFeria);
+                    mostrarExito("Guardado con éxito");
+                    
+                } catch (DescVacia ex) {
+                    mostrarAlerta(ex.getMessage());
+                }
+             
+             });
+             
+             btnCancelar.setOnAction(e -> {
+            try{
+            App.setRoot("administracionAuspiciantes");
+            } catch(IOException i){
+                i.printStackTrace();
+            }
+        });
         }
     }
 }

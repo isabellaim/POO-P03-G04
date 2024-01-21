@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -75,7 +76,30 @@
             </HBox>
             <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="740.0" style="-fx-background-color: lavender;" vbarPolicy="NEVER">
                <content>
-                  <VBox fx:id="vbFerias" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="448.0" minWidth="-Infinity" prefWidth="738.0" spacing="10.0" style="-fx-background-color: white;" />
+                  <VBox fx:id="vbFerias" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="448.0" minWidth="-Infinity" prefWidth="738.0" spacing="10.0" style="-fx-background-color: white;">
+                     <children>
+                        <GridPane prefWidth="514.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="281.0" text="Feria seleccionada:">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblNombreFeria" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="365.0" text="Nombre de feria" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Arial Rounded MT" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children></VBox>
                </content>
             </ScrollPane>
          </children>
@@ -98,16 +122,30 @@
             </HBox>
             <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="485.0" spacing="50.0">
                <children>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="196.0" prefWidth="364.0" />
-                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="450.0" spacing="5.0">
+                  <TextField fx:id="taDescripcion" alignment="TOP_LEFT" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="195.0" prefWidth="364.0" />
+                  <GridPane alignment="CENTER" prefHeight="68.0" prefWidth="485.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="93.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="138.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="133.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints />
+                      <RowConstraints />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="344.0" text="Incluye stand en la feria:" wrapText="true">
+                        <CheckBox fx:id="cbSi" disable="true" mnemonicParsing="false" text="Si" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="cbNo" disable="true" mnemonicParsing="false" text="No" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="292.0" text="Incluye stand en la feria:" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="24.0" />
                            </font>
                         </Label>
                      </children>
-                  </HBox>
+                  </GridPane>
                   <GridPane>
                     <columnConstraints>
                       <ColumnConstraints />
@@ -124,12 +162,12 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="btnGuardar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: indigo;" text="Guardar" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Button fx:id="btnGuardar" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: indigo;" text="Guardar" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnCancelar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: indigo;" text="Cancelar" textFill="WHITE" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                        <Button fx:id="btnCancelar" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: indigo;" text="Cancelar" textFill="WHITE" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="18.0" />
                            </font>
