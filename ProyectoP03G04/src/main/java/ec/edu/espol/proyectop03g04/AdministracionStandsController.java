@@ -190,19 +190,19 @@ public class AdministracionStandsController implements Initializable {
             VBox vbSec3 = crearVbSec();
             VBox vbSec4 = crearVbSec();
             
-            Stand[] standsSec1 = feria.getSeccion1().getStandsPorSeccion();
+            ArrayList<Stand> standsSec1 = feria.getSeccion1().getStandsPorSeccion();
             for(Stand stand: standsSec1){
                 mostrarStands(vbSec1, stand, feria, vbInfoStand, font2, font3, font4,"Sección #1");
             }
-            Stand[] standsSec2 = feria.getSeccion2().getStandsPorSeccion();
+            ArrayList<Stand> standsSec2 = feria.getSeccion2().getStandsPorSeccion();
             for(Stand stand: standsSec2){
                 mostrarStands(vbSec2, stand, feria, vbInfoStand, font2, font3, font4,"Sección #2");
             }
-            Stand[] standsSec3 = feria.getSeccion3().getStandsPorSeccion();
+            ArrayList<Stand> standsSec3 = feria.getSeccion3().getStandsPorSeccion();
             for(Stand stand: standsSec3){
                 mostrarStands(vbSec3, stand, feria, vbInfoStand, font2, font3, font4,"Sección #3");
             }
-            Stand[] standsSec4 = feria.getSeccion4().getStandsPorSeccion();
+            ArrayList<Stand> standsSec4 = feria.getSeccion4().getStandsPorSeccion();
             for(Stand stand: standsSec4){
                 mostrarStands(vbSec4, stand, feria, vbInfoStand, font2, font3, font4,"Sección #4");
             }

@@ -215,6 +215,13 @@ public class AdministracionFeriasController implements Initializable {
                         io.printStackTrace();
                     }
                 });
+                btnEditarFeria.setOnAction(j -> {
+                    try{
+                        App.setRoot("opcionEditarFeria");
+                    } catch(IOException io){
+                        io.printStackTrace();
+                    }
+                });
             });
         }
     }
