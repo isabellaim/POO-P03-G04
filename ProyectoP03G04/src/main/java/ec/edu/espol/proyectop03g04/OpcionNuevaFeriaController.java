@@ -39,8 +39,6 @@ public class OpcionNuevaFeriaController implements Initializable {
     @FXML
     private ImageView imgHeader2;
     @FXML
-    private BorderPane bpOpcionNuevaFeria;
-    @FXML
     private Button btnCancelar;
     @FXML
     private Button btnGuardar;
@@ -84,6 +82,8 @@ public class OpcionNuevaFeriaController implements Initializable {
     private DatePicker dpFechaFin;
     @FXML
     private DatePicker dpFechaInicio;
+    @FXML
+    private BorderPane bpOpcionNuevaFeria;
 
     /**
      * Initializes the controller class.
@@ -139,9 +139,13 @@ public class OpcionNuevaFeriaController implements Initializable {
             this.validarSiFechaEstaDespues(fechaIni, fechaFin);
                        
             cantidadStands1 = Integer.parseInt(tfCantidadStands1.getText());
+            validarCantStands(cantidadStands1);
             cantidadStands2 = Integer.parseInt(tfCantidadStands2.getText());
+            validarCantStands(cantidadStands2);
             cantidadStands3 = Integer.parseInt(tfCantidadStands3.getText());
+            validarCantStands(cantidadStands3);
             cantidadStands4 = Integer.parseInt(tfCantidadStands4.getText());
+            validarCantStands(cantidadStands4);
             
             AdministracionFeriasController.ferias.add(new Feria(nombre,fechaIni,fechaFin,lugar,descripcion,horario,cantidadStands1,cantidadStands2,cantidadStands3,cantidadStands4));
             App.setRoot("administracionFerias");
@@ -153,7 +157,7 @@ public class OpcionNuevaFeriaController implements Initializable {
         } catch (FechaVacia fv) {
             mostrarAlerta("Por favor coloque fechas válidas.");
         } catch(StringVacio sv){
-            mostrarAlerta("Por favor coloque información válida.");
+            mostrarAlerta(sv.getMessage());
         } catch(IOException e){
             e.printStackTrace();
         } catch (Exception e){
@@ -164,7 +168,7 @@ public class OpcionNuevaFeriaController implements Initializable {
     private static String recuperarString(TextField tf) throws StringVacio{
         String str = tf.getText();
         if (str.equals("")){
-            throw new StringVacio();
+            throw new StringVacio("Por favor coloque información válida.");
         }
         return str;
     }
@@ -201,7 +205,11 @@ public class OpcionNuevaFeriaController implements Initializable {
             throw new FechaNoPuedeSerDespues();   
         }
     }
-     
+    private void validarCantStands(int num) throws StringVacio{
+        if(num==0){
+            throw new StringVacio("Por favor escoja una cantidad de Stands diferente de 0.");
+        }
+    }
     private void validarHorario(String horario) throws StringVacio {
         horario = horario.strip().toLowerCase();
         String[] palabras = horario.split("-");

@@ -72,11 +72,11 @@ public class App extends Application {
         sectores6.add(SC.EDUCACION);
 
         Emprendedor emprendedor1 = new Emprendedor("1712345678","SaborArte","Ana García","0987654321","ana@saborarte.com","Calle Principal #123"," www.saborarte.com",reds1,"Productos gourmet y experiencias únicas");
-        Stand stand1 = feria1.getSeccion1().getStandsPorSeccion()[0];
+        Stand stand1 = feria1.getSeccion1().getStandsPorSeccion().get(0);
         stand1.setFechaAsig(LocalDate.of(2024,1,16));
         stand1.setReservado(true);
         stand1.setDueno(emprendedor1);
-        Stand stand2 = feria2.getSeccion1().getStandsPorSeccion()[1];
+        Stand stand2 = feria2.getSeccion1().getStandsPorSeccion().get(1);
         stand2.setFechaAsig(LocalDate.of(2023,11,22));
         stand2.setReservado(true);
         stand2.setDueno(emprendedor1);
@@ -85,11 +85,11 @@ public class App extends Application {
         feria2.getEmprendedores().add(new EmprendedorEnFeria(emprendedor1,stand2,"Sección #1"));
         
         Emprendedor emprendedor2 = new Emprendedor("1809876543","EcoVida","Carlos Mendoza","0998765432","carlos@ecovida.ec","Av. Ecológica #456","www.ecovida.ec",reds2,"Productos orgánicos y talleres de reciclaje");
-        Stand stand3 = feria1.getSeccion2().getStandsPorSeccion()[2];
+        Stand stand3 = feria1.getSeccion2().getStandsPorSeccion().get(2);
         stand3.setReservado(true);
         stand3.setFechaAsig(LocalDate.of(2024,1,10));
         stand3.setDueno(emprendedor2);
-        Stand stand4 = feria2.getSeccion2().getStandsPorSeccion()[4];
+        Stand stand4 = feria2.getSeccion2().getStandsPorSeccion().get(4);
         stand4.setReservado(true);
         stand4.setDueno(emprendedor2);
         stand4.setFechaAsig(LocalDate.of(2023,11,30));
@@ -98,11 +98,11 @@ public class App extends Application {
         feria2.getEmprendedores().add(new EmprendedorEnFeria(emprendedor2,stand4,"Sección #2"));
         
         Emprendedor emprendedor3 = new Emprendedor("1923456789","IluminaArte","Marta Pérez","0976543210","mar@iluminaarte.com","Plaza Luminosa #789","www.iluminaarte.com",reds3,"Crea instalaciones de iluminación artística para restaurantes");
-        Stand stand5 = feria1.getSeccion3().getStandsPorSeccion()[3];
+        Stand stand5 = feria1.getSeccion3().getStandsPorSeccion().get(3);
         stand5.setReservado(true);
         stand5.setDueno(emprendedor3);
         stand5.setFechaAsig(LocalDate.of(2024,1,13));
-        Stand stand6 = feria2.getSeccion3().getStandsPorSeccion()[0];
+        Stand stand6 = feria2.getSeccion3().getStandsPorSeccion().get(0);
         stand6.setReservado(true);
         stand6.setDueno(emprendedor3);
         stand6.setFechaAsig(LocalDate.of(2023,12,1));
@@ -111,11 +111,11 @@ public class App extends Application {
         feria2.getEmprendedores().add(new EmprendedorEnFeria(emprendedor3,stand6,"Sección #3"));
     
         Emprendedor emprendedor4 = new Emprendedor("2012345678","CulturaVerde","Juan Rodríguez","0965432109","juan@cultuver.com","Calle Cultural #234","www.culturaverde.com",reds4,"Promueve la conciencia ambiental y ofrece eventos culturales");
-        Stand stand7 = feria1.getSeccion4().getStandsPorSeccion()[1];
+        Stand stand7 = feria1.getSeccion4().getStandsPorSeccion().get(1);
         stand7.setReservado(true);
         stand7.setDueno(emprendedor4);
         stand7.setFechaAsig(LocalDate.of(2024,1,18));
-        Stand stand8 = feria2.getSeccion4().getStandsPorSeccion()[2];
+        Stand stand8 = feria2.getSeccion4().getStandsPorSeccion().get(2);
         stand8.setReservado(true);
         stand8.setDueno(emprendedor4);
         stand8.setFechaAsig(LocalDate.of(2023,1,15));
@@ -126,7 +126,7 @@ public class App extends Application {
         Auspiciante auspiciante1 = new Auspiciante("2112345678","SaludPlus","Laura Herrera","0954321098","lau@saludplus.com", "Av. Saludable #567", "www.saludplus.com",reds5, sectores5);
         AuspicianteEnFeria ausF1 = new AuspicianteEnFeria(auspiciante1, "Degustaciones de productos orgánicos y clases de yoga al aire libre", false);
         AuspicianteEnFeria ausFeria1 = new AuspicianteEnFeria(auspiciante1, "Asesoramiento nutricional, sesiones de fitness en vivo y muestras gratuitas de productos saludables", true);
-        Stand stand9 = feria2.getSeccion3().getStandsPorSeccion()[2];
+        Stand stand9 = feria2.getSeccion3().getStandsPorSeccion().get(2);
         stand9.setReservado(true);
         stand9.setDueno(auspiciante1);
         stand9.setFechaAsig(LocalDate.of(2023,11,27));
@@ -136,10 +136,10 @@ public class App extends Application {
         AdministracionAuspiciantesController.auspiciantes.add(auspiciante1);
         
         Auspiciante auspiciante2 = new Auspiciante("2209876543","VestirEstilo","Pablo Gómez","0945678901","pablo@vestir.ec", "Moda Street #789", "www.vestirestilo.ec",reds5, sectores6);
-        Stand stand10 = feria1.getSeccion1().getStandsPorSeccion()[3];
+        Stand stand10 = feria1.getSeccion1().getStandsPorSeccion().get(3);
         stand10.setReservado(true);
         stand10.setFechaAsig(LocalDate.of(2024,1,15));
-        Stand stand11 = feria2.getSeccion2().getStandsPorSeccion()[1];
+        Stand stand11 = feria2.getSeccion2().getStandsPorSeccion().get(1);
         stand11.setReservado(true);
         stand11.setFechaAsig(LocalDate.of(2023,12,3));
         AuspicianteEnFeria ausF2 = new AuspicianteEnFeria(auspiciante2, "Descuentos exclusivos en tiendas y talleres interactivos", true);
