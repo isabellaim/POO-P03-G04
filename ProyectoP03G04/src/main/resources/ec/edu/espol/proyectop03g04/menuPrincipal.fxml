@@ -10,82 +10,82 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bpPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="990.0" prefWidth="1710.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectop03g04.MenuPrincipalController">
-   <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+<BorderPane fx:id="bpPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectop03g04.MenuPrincipalController">
+    <center>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" maxHeight="410.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="1710.0" spacing="100.0" style="-fx-background-color: white;">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="1280.0" spacing="60.0" style="-fx-background-color: white;">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="350.0" spacing="25.0">
                      <children>
-                        <ImageView fx:id="imgAdminFeria" fitHeight="150.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgAdminFeria" fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/parque-tematico.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminFeria" alignment="CENTER" mnemonicParsing="false" onAction="#clickAdministracionFerias" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Ferias" textFill="WHITE">
+                        <Button fx:id="btnAdminFeria" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickAdministracionFerias" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: indigo;" text="Administración de Ferias" textFill="WHITE">
                            <font>
-                              <Font name="October Tamil Bold" size="24.0" />
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="350.0" spacing="25.0">
                      <children>
-                        <ImageView fx:id="imgAdminEmpre" fitHeight="150.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgAdminEmpre" fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/grupo.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminEmpre" alignment="CENTER" mnemonicParsing="false" onAction="#clickAdministracionEmprendedores" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" text="Administración de Emprendedores" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                        <Button fx:id="btnAdminEmpre" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickAdministracionEmprendedores" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: indigo;" text="Administración de Emprendedores" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
-                              <Font name="October Tamil Bold" size="24.0" />
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="350.0" spacing="25.0">
                      <children>
-                        <ImageView fx:id="imgAdminAus" fitHeight="150.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgAdminAus" fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/lucha.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminAus" alignment="CENTER" mnemonicParsing="false" onAction="#clickAdministracionAuspiciantes" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Auspiciantes" textFill="WHITE">
+                        <Button fx:id="btnAdminAus" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickAdministracionAuspiciantes" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: indigo;" text="Administración de Auspiciantes" textFill="WHITE">
                            <font>
-                              <Font name="October Tamil Bold" size="24.0" />
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="410.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="1710.0" spacing="200.0" style="-fx-background-color: white;">
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="1280.0" spacing="150.0" style="-fx-background-color: white;">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="350.0" spacing="25.0">
                      <children>
-                        <ImageView fx:id="imgAdminStands" fitHeight="150.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgAdminStands" fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/feria%20(1).png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnAdminStands" alignment="CENTER" mnemonicParsing="false" onAction="#clickAdministracionStands" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" styleClass="theme" text="Administración de Stands" textFill="WHITE">
+                        <Button fx:id="btnAdminStands" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickAdministracionStands" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: indigo;" text="Administración de Stands" textFill="WHITE">
                            <font>
-                              <Font name="October Tamil Bold" size="24.0" />
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="450.0" spacing="25.0">
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="350.0" spacing="25.0">
                      <children>
-                        <ImageView fx:id="imgSalir" fitHeight="150.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgSalir" fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/salida.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnSalir" alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="450.0" style="-fx-background-color: indigo;" text="Salir" textFill="WHITE">
+                        <Button fx:id="btnSalir" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickSalir" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: indigo;" text="Salir" textFill="WHITE">
                            <font>
-                              <Font name="October Tamil Bold" size="24.0" />
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
                            </font>
                         </Button>
                      </children>
@@ -96,29 +96,32 @@
       </VBox>
    </center>
    <top>
-      <VBox maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" BorderPane.alignment="CENTER">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" spacing="150.0" style="-fx-background-color: lavender;">
+            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="1280.0" spacing="100.0" style="-fx-background-color: lavender;">
                <children>
-                  <ImageView fx:id="imgHeader1" fitHeight="130.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgHeader1" fitHeight="100.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/feria.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER" maxHeight="100.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Menú Principal" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="700.0" text="¡Bienvenidos a FeriaWorld!" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
                      <font>
-                        <Font name="October Tamil Heavy" size="48.0" />
+                        <Font name="Arial Rounded MT Bold" size="36.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="imgHeader2" fitHeight="130.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgHeader2" fitHeight="100.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/rueda-de-la-fortuna.png" />
                      </image>
                   </ImageView>
                </children>
             </HBox>
-            <Line endX="1710.0" stroke="INDIGO" strokeWidth="5.0" />
+            <Line endX="1280.0" stroke="INDIGO" strokeWidth="5.0" />
          </children>
       </VBox>
    </top>
+   <bottom>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="1280.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>

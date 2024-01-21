@@ -12,95 +12,95 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bpAdminEmprendedores" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="990.0" prefWidth="1710.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectop03g04.AdministracionEmprendedoresController">    
-    <top>
-      <VBox maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" BorderPane.alignment="CENTER">
+<BorderPane fx:id="bpAdminEmprendedores" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectop03g04.AdministracionEmprendedoresController">
+   <top>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" spacing="150.0" style="-fx-background-color: lavender;">
+            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="1280.0" spacing="100.0" style="-fx-background-color: lavender;">
                <children>
-                  <Button fx:id="btnRegresar" maxHeight="70.0" maxWidth="160.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="70.0" prefWidth="130.0" style="-fx-background-color: indigo;" text="Regresar" textFill="WHITE">
+                  <Button fx:id="btnRegresar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="60.0" prefWidth="100.0" style="-fx-background-color: indigo;" text="Regresar" textFill="WHITE">
                      <font>
-                        <Font name="October Tamil Bold" size="22.0" />
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Label alignment="CENTER" maxHeight="100.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Administración de Emprendedores" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="700.0" text="Administración de Emprendedores" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
                      <font>
-                        <Font name="October Tamil Heavy" size="48.0" />
+                        <Font name="Arial Rounded MT Bold" size="36.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="imgHeader2" fitHeight="130.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgHeader2" fitHeight="100.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imagenes/rueda-de-la-fortuna.png" />
                      </image>
                   </ImageView>
                </children>
             </HBox>
-            <Line endX="1710.0" stroke="INDIGO" strokeWidth="5.0" />
+            <Line endX="1280.0" stroke="INDIGO" strokeWidth="5.0" />
          </children>
       </VBox>
     </top>
-    <bottom>
-      <HBox prefHeight="86.0" prefWidth="1710.0" BorderPane.alignment="CENTER" />
+   <bottom>
+      <HBox prefHeight="40.0" prefWidth="1280.0" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
-      <VBox alignment="CENTER" prefHeight="594.0" prefWidth="1310.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="740.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="177.0" prefWidth="1310.0">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="740.0">
                <children>
-                  <Label text="Emprendedores">
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="190.0" text="Emprendedores">
                      <font>
-                        <Font name="October Tamil Bold" size="40.0" />
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <ScrollPane prefHeight="594.0" prefWidth="1176.0" style="-fx-background-color: lavender;">
+            <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="740.0" style="-fx-background-color: lavender;" vbarPolicy="NEVER">
                <content>
-                  <VBox fx:id="vbEmprendedores" prefHeight="960.0" prefWidth="1179.0" />
+                  <VBox fx:id="vbEmprendedores" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="448.0" minWidth="-Infinity" prefWidth="738.0" spacing="10.0" style="-fx-background-color: white;" />
                </content>
             </ScrollPane>
          </children>
       </VBox>
    </center>
    <left>
-      <Pane prefHeight="754.0" prefWidth="83.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="540.0" prefWidth="55.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <VBox alignment="CENTER" prefHeight="754.0" prefWidth="451.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="485.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="181.0" prefWidth="451.0">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="485.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="51.0" prefWidth="277.0" text="Opciones">
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="112.0" text="Opciones">
                      <font>
-                        <Font name="October Tamil Bold" size="40.0" />
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <VBox alignment="CENTER" prefHeight="586.0" prefWidth="451.0" spacing="50.0">
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="485.0" spacing="50.0">
                <children>
-                  <Button fx:id="btnNuevoEmprendedor" layoutX="86.0" layoutY="374.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="300.0" style="-fx-background-color: indigo;" text="Nuevo Emprendedor" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <Button fx:id="btnNuevoEmprendedor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="364.0" style="-fx-background-color: indigo;" text="Registrar Emprendedor" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font name="October Tamil Bold" size="24.0" />
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
                      </font>
                   </Button>
-                  <VBox alignment="CENTER" prefHeight="140.0" prefWidth="451.0" spacing="10.0">
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="450.0" spacing="5.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="42.0" prefWidth="224.0" text="Emprendedor:" wrapText="true">
+                        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" text="Emprendedor:" wrapText="true">
                            <font>
-                              <Font name="October Tamil Bold" size="30.0" />
+                              <Font name="Arial Rounded MT Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lblEmprendedorEscogido" alignment="CENTER" prefHeight="55.0" prefWidth="347.0" text="Escoja un emprendedor" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="lblEmprendedorEscogido" alignment="CENTER" layoutX="175.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="90.0" minWidth="-Infinity" prefWidth="190.0" text="Escoja un emprendedor" textAlignment="CENTER" wrapText="true">
                            <font>
-                              <Font name="October Tamil Regular" size="30.0" />
+                              <Font name="Arial Rounded MT" size="24.0" />
                            </font>
                         </Label>
                      </children>
-                  </VBox>
-                  <Button fx:id="btnEditarEmprendedor" disable="true" mnemonicParsing="false" prefHeight="67.0" prefWidth="300.0" style="-fx-background-color: indigo;" text="Editar Emprendedor" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  </HBox>
+                  <Button fx:id="btnEditarEmprendedor" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="364.0" style="-fx-background-color: indigo;" text="Editar Emprendedor" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
-                        <Font name="October Tamil Bold" size="24.0" />
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
                      </font>
                   </Button>
                </children>

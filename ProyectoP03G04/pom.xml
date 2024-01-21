@@ -36,7 +36,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.4</version>
                 <configuration>
-                    <mainClass>ec.edu.espol.proyectop03g04.App</mainClass>
+                    <mainClass>ec.edu.espol.proyectop03g04.RunMain</mainClass>
                 </configuration>
                 <executions>
                     <execution>
@@ -78,6 +78,41 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- Copia las dependencias librerias javafx .jar a la carpeta "lib" de tu proyecto -->
+            <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <configuration>
+              <outputDirectory>${project.build.directory}/lib</outputDirectory>
+              <excludeTransitive>false</excludeTransitive> 
+              <stripVersion>false</stripVersion>
+          </configuration>
+          <executions>
+              <execution>
+                  <id>copy-dependencies</id>
+                  <phase>package</phase>
+                  <goals>
+                      <goal>copy-dependencies</goal>
+                  </goals>
+              </execution>
+          </executions>
+            </plugin>
+
+                <!-- Agrega la referencia del contenido de la carpeta "lib" en el classpath de tu proyecto-->
+                <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-jar-plugin</artifactId>
+              <version>2.4</version>
+              <configuration>
+                  <archive>
+                      <manifest>
+                          <addClasspath>true</addClasspath>
+                          <classpathPrefix>lib/</classpathPrefix>
+                          <mainClass>ec.edu.espol.proyectop03g04.RunMain</mainClass>
+                      </manifest>
+                  </archive>
+              </configuration>
+                </plugin>
         </plugins>
     </build>
 </project>

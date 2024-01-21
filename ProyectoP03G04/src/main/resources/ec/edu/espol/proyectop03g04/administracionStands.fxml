@@ -11,60 +11,64 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bpAdminStands" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="990.0" prefWidth="1710.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectop03g04.AdministracionStandsController">
-   <center>
-      <VBox alignment="CENTER" prefHeight="839.0" prefWidth="1710.0" BorderPane.alignment="TOP_CENTER">
+<BorderPane fx:id="bpAdminStands" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.proyectop03g04.AdministracionStandsController">
+    <top>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" maxHeight="160.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="1710.0" spacing="50.0" style="-fx-background-color: white;">
+            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="1280.0" spacing="100.0" style="-fx-background-color: lavender;">
                <children>
-                  <Label text="Ingrese el código de una feria: ">
+                  <Button fx:id="btnRegresar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="60.0" prefWidth="100.0" style="-fx-background-color: indigo;" text="Regresar" textFill="WHITE">
                      <font>
-                        <Font name="October Tamil Regular" size="30.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="tfCodigoFeria" promptText="Código">
-                     <font>
-                        <Font name="October Tamil Regular" size="30.0" />
-                     </font>
-                  </TextField>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" maxHeight="660.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1710.0" style="-fx-background-color: white;">
-               <children>
-                  <ImageView fx:id="imgAntesMostrarStands" fitHeight="507.0" fitWidth="499.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/globos.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </center>
-   <top>
-      <VBox maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox fx:id="hbHeading" alignment="CENTER" maxHeight="170.0" maxWidth="1710.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="1710.0" spacing="150.0" style="-fx-background-color: lavender;">
-               <children>
-                  <Button fx:id="btnRegresar" maxHeight="70.0" maxWidth="160.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="70.0" prefWidth="130.0" style="-fx-background-color: indigo;" text="Regresar" textFill="WHITE">
-                     <font>
-                        <Font name="October Tamil Bold" size="22.0" />
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Label alignment="CENTER" maxHeight="100.0" maxWidth="900.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" text="Administración de Stands" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="700.0" text="Administración de Stands" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
                      <font>
-                        <Font name="October Tamil Heavy" size="48.0" />
+                        <Font name="Arial Rounded MT Bold" size="36.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="imgHeader2" fitHeight="130.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgHeader2" fitHeight="100.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imágenes/rueda-de-la-fortuna.png" />
+                        <Image url="@../Library/CloudStorage/OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imagenes/rueda-de-la-fortuna.png" />
                      </image>
                   </ImageView>
                </children>
             </HBox>
-            <Line endX="1710.0" stroke="INDIGO" strokeWidth="5.0" />
+            <Line endX="1280.0" stroke="INDIGO" strokeWidth="5.0" />
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="1280.0" spacing="50.0" style="-fx-background-color: white;">
+               <children>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="360.0" text="Ingrese el código de una feria: ">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfCodigoFeria" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" promptText="Código">
+                     <font>
+                        <Font name="Arial Rounded MT" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btnBuscar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clickBuscar" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: indigo;" text="Buscar" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </top>
+   <center>
+      <HBox fx:id="hbCentro" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="1280.0" spacing="20.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imgAntesMostrarStands" fitHeight="382.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../../../OneDrive-EscuelaSuperiorPolitécnicadelLitoral/ESPOL/PAOII-2023/POO/POO-P03-G04/ProyectoP03G04/src/main/resources/imagenes/globos.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1280.0" BorderPane.alignment="CENTER" />
+   </bottom>
  </BorderPane>
