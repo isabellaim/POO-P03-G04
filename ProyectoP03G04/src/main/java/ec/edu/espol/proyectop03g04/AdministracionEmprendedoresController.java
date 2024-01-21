@@ -4,9 +4,6 @@
  */
 package ec.edu.espol.proyectop03g04;
 
-import static ec.edu.espol.proyectop03g04.AdministracionFeriasController.codigoFeria;
-import static ec.edu.espol.proyectop03g04.AdministracionFeriasController.feriaEscogida;
-import static ec.edu.espol.proyectop03g04.AdministracionFeriasController.ferias;
 import java.util.*;
 import modelo.*;
 import java.io.FileInputStream;
@@ -31,6 +28,7 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.scene.control.ScrollPane;
 
 /**
  * FXML Controller class
@@ -66,6 +64,7 @@ public class AdministracionEmprendedoresController implements Initializable {
         // TODO
         Image img1 = new Image("/imagenes/rueda-de-la-fortuna.png");
         imgHeader2.setImage(img1);
+        emprendedorEscogido = null;
         this.cargarEmprendedores();
     }    
 
@@ -113,7 +112,7 @@ public class AdministracionEmprendedoresController implements Initializable {
         System.out.println(numHBoxes);
         
         for (Emprendedor emprendedor: emprendedores){
-            Image img = new Image("/imagenes/carousel_5593709.png");
+            Image img = new Image("/imagenes/emprendedorMostrar.png");
             ImageView iv = new ImageView(img);
             iv.setFitHeight(60);
             iv.setFitWidth(60);
@@ -181,6 +180,13 @@ public class AdministracionEmprendedoresController implements Initializable {
                 emprendedorEscogido=emprendedor;
                 lblEmprendedorEscogido.setText(emprendedor.getNombre());
                 btnEditarEmprendedor.setDisable(false);
+                btnEditarEmprendedor.setOnAction(u -> {
+                try{
+                    App.setRoot("opcionEditarEmprendedor");
+                } catch(IOException a){
+                    a.printStackTrace();
+                }
+                });
             });
         }
     
