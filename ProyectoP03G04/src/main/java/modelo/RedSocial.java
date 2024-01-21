@@ -10,21 +10,29 @@ package modelo;
  */
 public class RedSocial {
     private String cuenta;
-  private R redSocial;
+    private R redSocial;
 
-  // Constructor de clase RedSocial
-  
-  public RedSocial(String cuenta, R redSocial){
-    this.cuenta = cuenta;
-    this.redSocial = redSocial;
-  }
+    // Constructor de clase RedSocial
 
-  public R[] getValues() {
-      return R.values();
-  }
-  
-  // Metodo toString() de la clase RedSocial
-  public String toString(){
-    return "Cuenta: " + cuenta + " -- Red social: " + redSocial.toString();
-  }
+    public RedSocial(String cuenta, R redSocial){
+      this.cuenta = cuenta;
+      this.redSocial = redSocial;
+    }
+
+    public R[] getValues() {
+        return R.values();
+    }
+
+    public R getR(){
+        return redSocial;
+    }
+
+    public String getCuenta() {
+        return cuenta;
+    }
+
+    // Metodo toString() de la clase RedSocial
+    public String toString(){
+      return "Cuenta: " + cuenta + " -- Red social: " + redSocial.toString();
+    }
 }

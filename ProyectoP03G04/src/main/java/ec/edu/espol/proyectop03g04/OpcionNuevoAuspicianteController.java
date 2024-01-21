@@ -136,8 +136,6 @@ public class OpcionNuevoAuspicianteController implements Initializable {
         imageView7.setImage(new Image("/imagenes/sitioWeb.png"));
         imageView8.setImage(new Image("/imagenes/s.png"));
         imageView9.setImage(new Image("/imagenes/redes.png"));
-        
-        cbAlimentacion.setStyle("-fx-background: lightblue;");
     }    
     
     @FXML
@@ -271,8 +269,8 @@ public class OpcionNuevoAuspicianteController implements Initializable {
             personaRes = recuperarString(tfPersonResponable);
             telefono = recuperarString(tfTelefono);
             email = recuperarString(tfEmail);
-            direccion = telefono = recuperarString(tfDireccion);
-            sitioWeb = telefono = recuperarString(tfSitioWeb);
+            direccion = recuperarString(tfDireccion);
+            sitioWeb = recuperarString(tfSitioWeb);
             
             if(cbInstagram.isSelected()){
                 String cuenta = recuperarCuenta(tfInstagram);
