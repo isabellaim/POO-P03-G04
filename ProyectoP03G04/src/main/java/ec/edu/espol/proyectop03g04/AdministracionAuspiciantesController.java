@@ -186,8 +186,19 @@ public class AdministracionAuspiciantesController implements Initializable {
                 btnEditarAuspiciante.setDisable(false);
                 btnAsignarAuspicianteFeria.setDisable(false);
             });
+            
+              btnNuevoAuspiciante.setOnAction(e -> {
+                  try{
+                    App.setRoot("opcionNuevoAuspiciante");
+                    } catch(IOException c){
+                    c.printStackTrace();
+                    }
+               });
         }
     }
+    
+       
+            
     /*
     private boolean auspicianteExiste(String cedula){
         for(Auspiciante auspiciante: auspiciantes){
