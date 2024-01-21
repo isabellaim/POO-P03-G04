@@ -15,8 +15,21 @@ import javafx.scene.image.ImageView;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import javafx.application.Platform;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import modelo.Auspiciante;
+import modelo.AuspicianteEnFeria;
+import modelo.Emprendedor;
+import modelo.Feria;
+import modelo.R;
+import modelo.RedSocial;
+import modelo.SC;
+import modelo.Stand;
 /**
  * FXML Controller class
  *
@@ -85,22 +98,51 @@ public class MenuPrincipalController implements Initializable {
     }
     
     @FXML
-    private void clickAdministracionStands() throws IOException {
-        App.setRoot("administracionStands");
+    private void clickAdministracionStands() {
+        try{
+            App.setRoot("administracionStands");
+        } catch(IOException e){
+            e.printStackTrace();
+        }
     }
     
     @FXML
-    private void clickAdministracionFerias() throws IOException {
-        App.setRoot("administracionFerias");
+    private void clickAdministracionFerias() {
+        try{
+            App.setRoot("administracionFerias");
+        } catch(IOException e){
+            e.printStackTrace();
+        }
     }
     
     @FXML
-    private void clickAdministracionEmprendedores() throws IOException {
-        App.setRoot("administracionEmprendedores");
+    private void clickAdministracionEmprendedores() {
+        try{
+            App.setRoot("administracionEmprendedores");
+        } catch(IOException e){
+            e.printStackTrace();
+        }
     }
     
     @FXML
-    private void clickAdministracionAuspiciantes() throws IOException {
-        App.setRoot("administracionAuspiciantes");
+    private void clickAdministracionAuspiciantes() {
+        try{
+            App.setRoot("administracionAuspiciantes");
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    private void clickSalir() {
+        Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.setTitle(null);
+        alert.setHeaderText("Está saliendo del programa");
+        alert.setContentText("¡Gracias por visitarnos!");
+        Button okButton = (Button) alert.getDialogPane().lookupButton(ButtonType.OK);
+        okButton.setOnAction(event -> {
+            Platform.exit();
+        });
+        alert.showAndWait();
     }
 }

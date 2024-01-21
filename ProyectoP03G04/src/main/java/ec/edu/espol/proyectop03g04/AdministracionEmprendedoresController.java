@@ -4,6 +4,8 @@
  */
 package ec.edu.espol.proyectop03g04;
 
+import java.util.*;
+import modelo.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -26,7 +28,8 @@ import javafx.scene.layout.VBox;
  * @author isabella
  */
 public class AdministracionEmprendedoresController implements Initializable {
-
+    
+    public static ArrayList<Emprendedor> emprendedores = new ArrayList<>();
     @FXML
     private BorderPane bpAdminEmprendedores;
     @FXML
@@ -54,8 +57,12 @@ public class AdministracionEmprendedoresController implements Initializable {
     }    
 
     @FXML
-    private void clickRegresar() throws IOException {
-        App.setRoot("menuPrincipal");
+    private void clickRegresar() {
+        try{
+            App.setRoot("menuPrincipal");
+        } catch(IOException e){
+            e.printStackTrace();
+        }
     }
     
     

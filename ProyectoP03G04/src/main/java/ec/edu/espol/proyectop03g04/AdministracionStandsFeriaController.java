@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package ec.edu.espol.proyectop03g04;
 
 import java.io.FileInputStream;
@@ -45,7 +41,7 @@ import javafx.scene.text.TextAlignment;
  *
  * @author isabella
  */
-public class AdministracionStandsController implements Initializable {
+public class AdministracionStandsFeriaController implements Initializable {
 
     @FXML
     private BorderPane bpAdminStands;
@@ -54,13 +50,10 @@ public class AdministracionStandsController implements Initializable {
     @FXML
     private ImageView imgHeader2;
     @FXML
-    private ImageView imgAntesMostrarStands;
-    @FXML
     private Button btnRegresar;
     @FXML
-    private TextField tfCodigoFeria;
-    @FXML
-    private Button btnBuscar;
+    private Label lblCodigoFeria;
+    
     @FXML
     private HBox hbCentro;
 
@@ -72,14 +65,14 @@ public class AdministracionStandsController implements Initializable {
         Image img1 = new Image("/imagenes/rueda-de-la-fortuna.png");
         imgHeader2.setImage(img1);
         
-        Image img2 = new Image("/imagenes/globos.png");
-        imgAntesMostrarStands.setImage(img2);
+        lblCodigoFeria.setText(AdministracionFeriasController.codigoFeria);
+        clickBuscar();
     }    
     
     @FXML
     private void clickRegresar() {
         try{
-            App.setRoot("menuPrincipal");
+            App.setRoot("administracionFerias");
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -88,7 +81,7 @@ public class AdministracionStandsController implements Initializable {
     @FXML
     private void clickBuscar() {
         try{
-            Feria feria = recuperarFeria(tfCodigoFeria);
+            Feria feria = recuperarFeria(lblCodigoFeria);
             hbCentro.getChildren().clear();
             HBox hb1 = new HBox(35); //OJO
             hb1.setPrefWidth(710);
@@ -99,7 +92,6 @@ public class AdministracionStandsController implements Initializable {
             vb2.setPrefWidth(450);
             vb2.setPrefHeight(410);
             vb2.setAlignment(Pos.CENTER);
-            
             HBox hbInfoFeria = new HBox(10); //OJO
             hbInfoFeria.setPrefWidth(414);
             hbInfoFeria.setPrefHeight(80);
@@ -196,15 +188,15 @@ public class AdministracionStandsController implements Initializable {
             }
             Stand[] standsSec2 = feria.getSeccion2().getStandsPorSeccion();
             for(Stand stand: standsSec2){
-                mostrarStands(vbSec2, stand, feria, vbInfoStand, font2, font3, font4,"Sección #2");
+                mostrarStands(vbSec2, stand, feria, vbInfoStand, font2, font3, font4, "Sección #2");
             }
             Stand[] standsSec3 = feria.getSeccion3().getStandsPorSeccion();
             for(Stand stand: standsSec3){
-                mostrarStands(vbSec3, stand, feria, vbInfoStand, font2, font3, font4,"Sección #3");
+                mostrarStands(vbSec3, stand, feria, vbInfoStand, font2, font3, font4, "Sección #3");
             }
             Stand[] standsSec4 = feria.getSeccion4().getStandsPorSeccion();
             for(Stand stand: standsSec4){
-                mostrarStands(vbSec4, stand, feria, vbInfoStand, font2, font3, font4,"Sección #4");
+                mostrarStands(vbSec4, stand, feria, vbInfoStand, font2, font3, font4, "Sección #4");
             }
             
             Pane pane5 = new Pane();
@@ -271,7 +263,7 @@ public class AdministracionStandsController implements Initializable {
         Button okButton = (Button) alert.getDialogPane().lookupButton(ButtonType.OK);
         okButton.setOnAction(event -> {
             System.out.println("User clicked OK");
-                tfCodigoFeria.setText(feria.getCodigo());
+                lblCodigoFeria.setText(feria.getCodigo());
                 clickBuscar();
         });
         alert.showAndWait();
@@ -292,12 +284,12 @@ public class AdministracionStandsController implements Initializable {
         alert.showAndWait();
     }
     
-    private Feria recuperarFeria(TextField tfCodigoFeria) throws NoExisteFeria {
+    private Feria recuperarFeria(Label lblCodigoFeria) throws NoExisteFeria {
         boolean noExisteFeria = true;
         Feria feriaEncontrada = null;
         for(Feria feria: AdministracionFeriasController.ferias){
             String cod = feria.getCodigo();
-            if (cod.equals(tfCodigoFeria.getText().toUpperCase())){
+            if (cod.equals(lblCodigoFeria.getText())){
                 feriaEncontrada = feria;
                 noExisteFeria = false;
             }
@@ -307,6 +299,7 @@ public class AdministracionStandsController implements Initializable {
         }
         return feriaEncontrada;
     }
+    
     
     private Persona recuperarCedula(String cedula, Feria feria) throws NoExistePersona {
         Persona p = null;

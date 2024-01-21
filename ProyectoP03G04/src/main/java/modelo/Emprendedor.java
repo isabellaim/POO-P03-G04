@@ -9,7 +9,7 @@ import java.util.*;
  * @author isabella
  */
 public class Emprendedor extends Persona{
-    private String descripcion;
+  private String descripcion;
   private ArrayList<Stand> standsEmpre;
 
   // Constructor de clase Emprendedor

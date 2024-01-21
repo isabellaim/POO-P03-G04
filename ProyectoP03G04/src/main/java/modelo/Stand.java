@@ -4,13 +4,15 @@
  */
 package modelo;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author isabella
  */
 public class Stand {
-    private String codigoStand;
-  private String fechaAsig;
+  private String codigoStand;
+  private LocalDate fechaAsig;
   private Persona dueno;
   private boolean reservado;
 
@@ -29,7 +31,7 @@ public class Stand {
     return codigoStand;
   }
 
-  public String getFechaAsig(){
+  public LocalDate getFechaAsig(){
     return fechaAsig;
   }
 
@@ -47,7 +49,7 @@ public class Stand {
     this.codigoStand = codigoStand;
   }
 
-  public void setFechaAsig(String fechaAsig){
+  public void setFechaAsig(LocalDate fechaAsig){
     this.fechaAsig = fechaAsig;
   }
 

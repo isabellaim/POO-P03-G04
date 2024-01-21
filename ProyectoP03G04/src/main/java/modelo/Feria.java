@@ -4,19 +4,21 @@
  */
 package modelo;
 import java.util.*;
+import java.time.LocalDate;
+
 /**
  *
  * @author isabella
  */
-public class Feria {
+public class Feria implements Comparable<Feria> {
     private String codigo;
     private String nombre;
-    private String fechaIni;
-    private String fechaFin;
+    private LocalDate fechaIni;
+    private LocalDate fechaFin;
     private String lugar;
     private String descripcion;
     private String horario;
-    private ArrayList<Emprendedor> emprendedores;
+    private ArrayList<EmprendedorEnFeria> emprendedores;
     private ArrayList<AuspicianteEnFeria> auspiciantes;
     private OrganizacionStands seccion1;
     private OrganizacionStands seccion2;
@@ -26,7 +28,7 @@ public class Feria {
 
     // Constructor de la clase Feria
   
-    public Feria(String nombre, String fechaIni, String fechaFin, String lugar, String descripcion, String horario, int cntSec1, int cntSec2, int cntSec3, int cntSec4) {
+    public Feria(String nombre, LocalDate fechaIni, LocalDate fechaFin, String lugar, String descripcion, String horario, int cntSec1, int cntSec2, int cntSec3, int cntSec4) {
         numIncrementalCodigo += 1;
         this.codigo = "F" + (numIncrementalCodigo);
         this.nombre = nombre;
@@ -78,11 +80,11 @@ public class Feria {
         return nombre;
     }
 
-    public String getFechaIni() {
+    public LocalDate getFechaIni() {
         return fechaIni;
     }
 
-    public String getFechaFin() {
+    public LocalDate getFechaFin() {
         return fechaFin;
     }
 
@@ -98,7 +100,7 @@ public class Feria {
         return horario;
     }
 
-    public ArrayList<Emprendedor> getEmprendedores() {
+    public ArrayList<EmprendedorEnFeria> getEmprendedores() {
         return emprendedores;
     }
 
@@ -129,11 +131,11 @@ public class Feria {
         this.nombre = nombre;
     }
 
-    public void setFechaIni(String fechaIni) {
+    public void setFechaIni(LocalDate fechaIni) {
         this.fechaIni = fechaIni;
     }
 
-    public void setFechaFin(String fechaFin) {
+    public void setFechaFin(LocalDate fechaFin) {
         this.fechaFin = fechaFin;
     }
 
@@ -148,7 +150,15 @@ public class Feria {
     public void setHorario(String horario) {
         this.horario = horario;
     }
-  
+    
+    public void setEmprendedores(ArrayList<EmprendedorEnFeria> emp) {
+        this.emprendedores = emp;
+    }
+
+    public void setAuspiciantes(ArrayList<AuspicianteEnFeria> aus) {
+        this.auspiciantes = aus;
+    }
+    
     public void setSeccion1(OrganizacionStands seccion1) {
         this.seccion1 = seccion1;
     }
@@ -163,5 +173,10 @@ public class Feria {
   
     public void setSeccion4(OrganizacionStands seccion4) {
         this.seccion4 = seccion4;
+    }
+    
+    @Override
+    public int compareTo(Feria o){
+        return o.getFechaIni().compareTo(fechaIni);
     }
 }

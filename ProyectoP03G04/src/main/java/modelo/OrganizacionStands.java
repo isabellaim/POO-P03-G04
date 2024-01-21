@@ -50,6 +50,10 @@ public class OrganizacionStands {
   public Stand[] getStandsPorSeccion(){
     return standsPorSeccion;
   }
+  
+  public int getNumSeccion(){
+    return numSeccion;
+  }
 
   //Setters
   

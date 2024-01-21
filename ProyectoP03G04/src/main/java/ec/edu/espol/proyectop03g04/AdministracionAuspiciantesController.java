@@ -4,6 +4,8 @@
  */
 package ec.edu.espol.proyectop03g04;
 
+import java.util.*;
+import modelo.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,8 +29,8 @@ public class AdministracionAuspiciantesController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    @FXML
-    private BorderPane bpAdminEmprendedores;
+    
+    public static ArrayList<Auspiciante> auspiciantes = new ArrayList<>();
     @FXML
     private HBox hbHeading;
     @FXML
@@ -45,6 +47,8 @@ public class AdministracionAuspiciantesController implements Initializable {
     private Button btnEditarAuspiciante;
     @FXML
     private Button btnAsignarAuspicianteFeria;
+    @FXML
+    private BorderPane bpAdminAuspiciantes;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -54,8 +58,12 @@ public class AdministracionAuspiciantesController implements Initializable {
     }
     
     @FXML
-    private void clickRegresar() throws IOException {
-        App.setRoot("menuPrincipal");
+    private void clickRegresar() {
+        try{
+            App.setRoot("menuPrincipal");
+        } catch(IOException e){
+            e.printStackTrace();
+        }
     }
     
 }

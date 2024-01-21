@@ -9,15 +9,19 @@ import java.util.*;
  * @author isabella
  */
 public class AuspicianteEnFeria {
-    private Auspiciante aus;
+  private Auspiciante aus;
   private String descripcion;
   private boolean incluyeStand;
+  private ArrayList<Stand> standsAsignados;
 
   // Contructor de la clase AuspicianteEnFeria
   public AuspicianteEnFeria(Auspiciante aus, String descripcion, boolean incluyeStand){
     this.aus = aus;
     this.descripcion = descripcion;
     this.incluyeStand = incluyeStand;
+    if(incluyeStand){
+        standsAsignados = new ArrayList<>();
+    }
   }
 
   // Getters
@@ -31,6 +35,9 @@ public class AuspicianteEnFeria {
   public boolean getIncluyeStand(){
     return incluyeStand;
   }
+  public ArrayList<Stand> getStandsAsignados(){
+    return standsAsignados;
+  }
 
   // Setters
   
@@ -42,6 +49,9 @@ public class AuspicianteEnFeria {
   }
   public void setIncluyeStand(boolean incluyeStand){
     this.incluyeStand = incluyeStand;
+  }
+  public void setStandsAsignados(ArrayList<Stand> stands){
+    this.standsAsignados = stands;
   }
   public String toString(){
     return aus.getNombre();
