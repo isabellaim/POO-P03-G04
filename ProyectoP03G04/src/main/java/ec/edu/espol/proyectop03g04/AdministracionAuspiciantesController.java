@@ -194,6 +194,23 @@ public class AdministracionAuspiciantesController implements Initializable {
                     c.printStackTrace();
                     }
                });
+              
+             btnEditarAuspiciante.setOnAction(e -> {
+                try{
+                    App.setRoot("opcionEditarAuspiciante");
+                } catch(IOException a){
+                    a.printStackTrace();
+                }
+            });
+             
+             btnAsignarAuspicianteFeria.setOnAction(e -> {
+                try{
+                    App.setRoot("opcionAsignarAuspiciante");
+                } catch(IOException a){
+                    a.printStackTrace();
+                }
+            });
+            
         }
     }
     
