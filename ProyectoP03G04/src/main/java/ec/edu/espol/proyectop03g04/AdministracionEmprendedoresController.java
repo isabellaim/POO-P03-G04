@@ -171,7 +171,7 @@ public class AdministracionEmprendedoresController implements Initializable {
             
             btnNuevoEmprendedor.setOnAction(e -> {
                 try{
-                    App.setRoot("opcionNuevaFeria");
+                    App.setRoot("opcionNuevoEmprendedor");
                 } catch(IOException a){
                     a.printStackTrace();
                 }
