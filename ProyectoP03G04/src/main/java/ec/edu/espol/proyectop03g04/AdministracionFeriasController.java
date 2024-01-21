@@ -3,18 +3,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
 package ec.edu.espol.proyectop03g04;
+import excepciones.FechaVacia;
 import modelo.*;
 import java.util.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
@@ -85,6 +89,27 @@ public class AdministracionFeriasController implements Initializable {
         } catch(IOException e){
             e.printStackTrace();
         }
+    }
+    
+    private void verificarEditable(Feria feria) throws FechaVacia{
+        if (feria.getFechaIni().isBefore(LocalDate.now())) {
+            throw new FechaVacia("No se puede editar esta Feria porque la Fecha de Inicio ya pasó.");
+        } else if (feria.getFechaIni().isEqual(LocalDate.now())) {
+            System.out.println("No se puede editar esta Feria porque la Fecha de Inicio es hoy.");
+        }
+    }
+    
+    public void mostrarAlerta1(String msg) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(null);
+        alert.setHeaderText("Error");
+        alert.setContentText(msg);
+        Button okButton = (Button) alert.getDialogPane().lookupButton(ButtonType.OK);
+        okButton.setOnAction(event -> {
+            vbFerias.getChildren().clear();
+            cargarFerias();
+        });
+        alert.showAndWait();
     }
     
     private void cargarFerias(){
@@ -217,7 +242,10 @@ public class AdministracionFeriasController implements Initializable {
                 });
                 btnEditarFeria.setOnAction(j -> {
                     try{
+                        verificarEditable(feria);
                         App.setRoot("opcionEditarFeria");
+                    } catch(FechaVacia fv){
+                        mostrarAlerta1(fv.getMessage());
                     } catch(IOException io){
                         io.printStackTrace();
                     }

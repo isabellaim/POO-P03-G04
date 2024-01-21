@@ -64,6 +64,7 @@ public class AdministracionEmprendedoresController implements Initializable {
         // TODO
         Image img1 = new Image("/imagenes/rueda-de-la-fortuna.png");
         imgHeader2.setImage(img1);
+        emprendedorEscogido = null;
         this.cargarEmprendedores();
     }    
 
@@ -179,6 +180,13 @@ public class AdministracionEmprendedoresController implements Initializable {
                 emprendedorEscogido=emprendedor;
                 lblEmprendedorEscogido.setText(emprendedor.getNombre());
                 btnEditarEmprendedor.setDisable(false);
+                btnEditarEmprendedor.setOnAction(u -> {
+                try{
+                    App.setRoot("opcionEditarEmprendedor");
+                } catch(IOException a){
+                    a.printStackTrace();
+                }
+                });
             });
         }
     
