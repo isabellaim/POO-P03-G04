@@ -174,9 +174,6 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-//        System.out.println(Utilitaria.readListFromFileFeria());
-//        System.out.println(Utilitaria.readListFromFileEmprendedor());
-//        System.out.println(Utilitaria.readListFromFileAuspiciante());
         launch();
     }
 

@@ -284,8 +284,8 @@ public class OpcionNuevoAuspicianteController implements Initializable {
             personaRes = recuperarString(tfPersonResponable);
             telefono = recuperarString(tfTelefono);
             email = recuperarString(tfEmail);
-            direccion = recuperarString(tfDireccion);
-            sitioWeb = recuperarString(tfSitioWeb);
+            direccion = tfDireccion.getText();
+            sitioWeb = tfSitioWeb.getText();
             
             if(cbInstagram.isSelected()){
                 String cuenta = recuperarCuenta(tfInstagram);

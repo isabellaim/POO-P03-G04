@@ -17,9 +17,9 @@ import java.util.ArrayList;
  * @author jmuni
  */
 public class Utilitaria implements Serializable{
-    private static String nameFileFerias = "ferias.dat";
-    private static String nameFileEmprendedores = "emprendedores.dat";
-    private static String nameFileAuspiciantes = "auspiciantes.dat";
+    private static String nameFileFerias = "feriasArchivo.dat";
+    private static String nameFileEmprendedores = "emprendedoresArchivo.dat";
+    private static String nameFileAuspiciantes = "auspiciantesArchivo.dat";
     private static String nameFileStands = "stands.dat";
     
     //Feria

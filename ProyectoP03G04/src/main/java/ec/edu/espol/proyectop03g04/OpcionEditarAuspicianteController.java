@@ -325,7 +325,7 @@ public class OpcionEditarAuspicianteController implements Initializable {
             ivFotoEditar2.setImage(new Image("/imagenes/email.png"));
             btnGuardar.setOnAction(e -> {
                 try{
-                    validarTextField1(tfNuevoInfo,"Email");
+                    validarTextField1(tfNuevoInfo,"email");
                     auspiciante.setEmail(tfNuevoInfo.getText());
                     Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
                     App.setRoot("opcionEditarAuspiciante");
@@ -345,12 +345,11 @@ public class OpcionEditarAuspicianteController implements Initializable {
             ivFotoEditar2.setImage(new Image("/imagenes/sitioWeb.png"));
             btnGuardar.setOnAction(e -> {
                 try{
-                    validarTextField1(tfNuevoInfo,"Email");
+                    
                     auspiciante.setSitioWeb(tfNuevoInfo.getText());
                     Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
                     App.setRoot("opcionEditarAuspiciante");
-                } catch(StringVacio sv){
-                   mostrarAlerta1(sv.getMessage(),elegido);
+                
                 } catch(IOException a){
                     a.printStackTrace();
                 }
@@ -365,12 +364,10 @@ public class OpcionEditarAuspicianteController implements Initializable {
             ivFotoEditar2.setImage(new Image("/imagenes/lugar.png"));
             btnGuardar.setOnAction(e -> {
                 try{
-                    validarTextField1(tfNuevoInfo,"Dirección");
+                    
                     auspiciante.setDireccion(tfNuevoInfo.getText());
                     Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
                     App.setRoot("opcionEditarAuspiciante");
-                } catch(StringVacio sv){
-                   mostrarAlerta1(sv.getMessage(),elegido);
                 } catch(IOException a){
                     a.printStackTrace();
                 }
