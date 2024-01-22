@@ -146,8 +146,8 @@ public class OpcionNuevaFeriaController implements Initializable {
             validarCantStands(cantidadStands3);
             cantidadStands4 = Integer.parseInt(tfCantidadStands4.getText());
             validarCantStands(cantidadStands4);
-            
-            AdministracionFeriasController.ferias.add(new Feria(nombre,fechaIni,fechaFin,lugar,descripcion,horario,cantidadStands1,cantidadStands2,cantidadStands3,cantidadStands4));
+            Feria feria = new Feria(nombre,fechaIni,fechaFin,lugar,descripcion,horario,cantidadStands1,cantidadStands2,cantidadStands3,cantidadStands4);
+            AdministracionFeriasController.ferias.add(feria);
             App.setRoot("administracionFerias");
                 
         } catch(NumberFormatException nfe){

@@ -303,6 +303,7 @@ public class OpcionEditarFeriaController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"nombre");
                     feria.setNombre(tfNuevoInfo.getText());
+                    //AdministracionFeriasController.serializarFerias();
                     App.setRoot("opcionEditarFeria");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -321,6 +322,7 @@ public class OpcionEditarFeriaController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"lugar");
                     feria.setLugar(tfNuevoInfo.getText());
+                    //AdministracionFeriasController.serializarFerias();
                     App.setRoot("opcionEditarFeria");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -341,6 +343,7 @@ public class OpcionEditarFeriaController implements Initializable {
                     validarTextField1(tfNuevoInfo,"horario");
                     validarHorario(tfNuevoInfo.getText());
                     feria.setHorario(tfNuevoInfo.getText());
+                    //AdministracionFeriasController.serializarFerias();
                     App.setRoot("opcionEditarFeria");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -362,6 +365,7 @@ public class OpcionEditarFeriaController implements Initializable {
                     int num = Integer.parseInt(tfNuevoInfo.getText());
                     validarCantStands(num);
                     feria.getSeccion1().setCantStands(num,feria);
+                    //AdministracionFeriasController.serializarFerias();
                     App.setRoot("opcionEditarFeria");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -385,6 +389,7 @@ public class OpcionEditarFeriaController implements Initializable {
                     int num = Integer.parseInt(tfNuevoInfo.getText());
                     validarCantStands(num);
                     feria.getSeccion2().setCantStands(num,feria);
+                    //AdministracionFeriasController.serializarFerias();
                     App.setRoot("opcionEditarFeria");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -407,6 +412,7 @@ public class OpcionEditarFeriaController implements Initializable {
                     int num = Integer.parseInt(tfNuevoInfo.getText());
                     validarCantStands(num);
                     feria.getSeccion3().setCantStands(num,feria);
+                    //AdministracionFeriasController.serializarFerias();
                     App.setRoot("opcionEditarFeria");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -429,6 +435,7 @@ public class OpcionEditarFeriaController implements Initializable {
                     int num = Integer.parseInt(tfNuevoInfo.getText());
                     validarCantStands(num);
                     feria.getSeccion4().setCantStands(num,feria);
+                    //AdministracionFeriasController.serializarFerias();
                     App.setRoot("opcionEditarFeria");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -503,6 +510,7 @@ public class OpcionEditarFeriaController implements Initializable {
                 try{
                     LocalDate fechaIni = validateDatePicker(dpNuevoInfo);
                     feria.setFechaIni(fechaIni);
+                    //AdministracionFeriasController.serializarFerias();
                     App.setRoot("opcionEditarFeria");
                 } catch(FechaVacia fv){
                     mostrarAlerta1("Por favor coloque una fecha válida.",elegido);
@@ -521,6 +529,7 @@ public class OpcionEditarFeriaController implements Initializable {
                     LocalDate fechaFin = validateDatePicker(dpNuevoInfo);
                     validarSiFechaEstaDespues(feria.getFechaIni(),fechaFin);
                     feria.setFechaFin(fechaFin);
+                    //AdministracionFeriasController.serializarFerias();
                     App.setRoot("opcionEditarFeria");
                 } catch(FechaVacia fv){
                     mostrarAlerta1("Por favor coloque una fecha válida.",elegido);
@@ -597,6 +606,7 @@ public class OpcionEditarFeriaController implements Initializable {
                 try{
                     validarTextField2(taNuevoInfo,"descripción");
                     feria.setDescripcion(taNuevoInfo.getText());
+                    //AdministracionFeriasController.serializarFerias();
                     App.setRoot("opcionEditarFeria");
                 } catch(StringVacio sv){
                     mostrarAlerta1(sv.getMessage(),elegido);

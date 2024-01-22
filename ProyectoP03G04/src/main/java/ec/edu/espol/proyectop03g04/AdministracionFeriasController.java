@@ -8,7 +8,10 @@ import modelo.*;
 import java.util.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -72,6 +75,7 @@ public class AdministracionFeriasController implements Initializable {
     
     public static Feria feriaEscogida;
     public static String codigoFeria;
+    private static final String archivoFerias = "/archivos/hola.dat";
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -253,5 +257,5 @@ public class AdministracionFeriasController implements Initializable {
             });
         }
     }
-    
+
 }

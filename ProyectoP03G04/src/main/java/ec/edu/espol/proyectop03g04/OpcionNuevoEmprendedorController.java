@@ -4,6 +4,8 @@
  */
 package ec.edu.espol.proyectop03g04;
 
+import static ec.edu.espol.proyectop03g04.AdministracionEmprendedoresController.emprendedores;
+import excepciones.PersonaConEsaCedula;
 import excepciones.StringVacio;
 import java.io.IOException;
 import java.net.URL;
@@ -132,7 +134,7 @@ public class OpcionNuevoEmprendedorController implements Initializable {
     @FXML
     private void clickRegresar(ActionEvent event) {
         try{
-            App.setRoot("administracionAuspiciantes");
+            App.setRoot("administracionEmprendedores");
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -162,6 +164,16 @@ public class OpcionNuevoEmprendedorController implements Initializable {
             throw new StringVacio("Por favor coloque información válida.");
         }
         return str;
+    }
+    
+    private static String recuperarCedula(TextField tf) throws PersonaConEsaCedula{
+        String cedula = tf.getText();
+        for(Emprendedor emp: emprendedores){
+            if (cedula.equals(emp.getCedula())){
+                throw new PersonaConEsaCedula("Ya existe un Emprendedor con esa cédula o RUC.");
+            }
+        }
+        return cedula;
     }
     
     private static String recuperarCuenta(TextField tf) throws StringVacio{
@@ -256,7 +268,7 @@ public class OpcionNuevoEmprendedorController implements Initializable {
         String descripcion = null;
         try{
             nombre = recuperarString(tfNombre);
-            cedula = recuperarString(tfCedula);
+            cedula = recuperarCedula(tfCedula);
             personaRes = recuperarString(tfPersonResponable);
             telefono = recuperarString(tfTelefono);
             email = recuperarString(tfEmail);
@@ -305,11 +317,12 @@ public class OpcionNuevoEmprendedorController implements Initializable {
                 
         } catch(StringVacio sv){
             mostrarAlerta(sv.getMessage());
+        } catch(PersonaConEsaCedula p){
+            mostrarAlerta(p.getMessage());
         } catch(IOException e){
             e.printStackTrace();
         } catch (Exception e){
             mostrarAlerta("Error");
         }
     }
-    
 }
