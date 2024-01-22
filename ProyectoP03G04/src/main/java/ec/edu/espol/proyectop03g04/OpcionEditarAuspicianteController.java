@@ -53,6 +53,7 @@ import modelo.Feria;
 import modelo.R;
 import modelo.RedSocial;
 import modelo.SC;
+import modelo.Utilitaria;
 
 /**
  * FXML Controller class
@@ -267,6 +268,7 @@ public class OpcionEditarAuspicianteController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"nombre");
                     auspiciante.setNombre(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
                     App.setRoot("opcionEditarAuspiciante");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -285,6 +287,7 @@ public class OpcionEditarAuspicianteController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"nombre persona responsable");
                     auspiciante.setEmail(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
                     App.setRoot("opcionEditarAuspiciante");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -304,6 +307,7 @@ public class OpcionEditarAuspicianteController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"teléfono");
                     auspiciante.setTelefono(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
                     App.setRoot("opcionEditarAuspiciante");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -323,6 +327,7 @@ public class OpcionEditarAuspicianteController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"Email");
                     auspiciante.setEmail(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
                     App.setRoot("opcionEditarAuspiciante");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -342,6 +347,7 @@ public class OpcionEditarAuspicianteController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"Email");
                     auspiciante.setSitioWeb(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
                     App.setRoot("opcionEditarAuspiciante");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -361,6 +367,7 @@ public class OpcionEditarAuspicianteController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"Dirección");
                     auspiciante.setDireccion(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
                     App.setRoot("opcionEditarAuspiciante");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -873,6 +880,7 @@ public class OpcionEditarAuspicianteController implements Initializable {
                         redes.add(red);
                     }
                     auspiciante.setRedesSociales(redes);
+                    Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
                     App.setRoot("opcionEditarAuspiciante");
 
                 } catch(StringVacio sv){

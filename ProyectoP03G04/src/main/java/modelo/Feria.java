@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
+import ec.edu.espol.proyectop03g04.AdministracionFeriasController;
 import java.io.Serializable;
 import java.util.*;
 import java.time.LocalDate;
@@ -25,13 +26,12 @@ public class Feria implements Comparable<Feria>, Serializable {
     private OrganizacionStands seccion2;
     private OrganizacionStands seccion3;
     private OrganizacionStands seccion4;
-    public static int numIncrementalCodigo = 0;
 
     // Constructor de la clase Feria
   
     public Feria(String nombre, LocalDate fechaIni, LocalDate fechaFin, String lugar, String descripcion, String horario, int cntSec1, int cntSec2, int cntSec3, int cntSec4) {
-        numIncrementalCodigo += 1;
-        this.codigo = "F" + (numIncrementalCodigo);
+        
+        this.codigo = "F" + (AdministracionFeriasController.ferias.size() + 1);
         this.nombre = nombre;
         this.fechaIni  = fechaIni;
         this.fechaFin = fechaFin;

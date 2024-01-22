@@ -45,6 +45,7 @@ import modelo.Feria;
 import modelo.R;
 import modelo.RedSocial;
 import modelo.SC;
+import modelo.Utilitaria;
 
 /**
  * FXML Controller class
@@ -260,6 +261,7 @@ public class OpcionEditarEmprendedorController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"nombre");
                     emprendedor.setNombre(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileEmprendedor(AdministracionEmprendedoresController.emprendedores);
                     App.setRoot("opcionEditarEmprendedor");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -278,6 +280,7 @@ public class OpcionEditarEmprendedorController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"Persona responsable");
                     emprendedor.setNombrePersona(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileEmprendedor(AdministracionEmprendedoresController.emprendedores);
                     App.setRoot("opcionEditarEmprendedor");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -297,6 +300,7 @@ public class OpcionEditarEmprendedorController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"telefono");
                     emprendedor.setTelefono(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileEmprendedor(AdministracionEmprendedoresController.emprendedores);
                     App.setRoot("opcionEditarEmprendedor");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -316,6 +320,7 @@ public class OpcionEditarEmprendedorController implements Initializable {
                 try{
                     validarTextField1(tfNuevoInfo,"Email");
                     emprendedor.setEmail(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileEmprendedor(AdministracionEmprendedoresController.emprendedores);
                     App.setRoot("opcionEditarEmprendedor");
                 } catch(StringVacio sv){
                    mostrarAlerta1(sv.getMessage(),elegido);
@@ -334,6 +339,7 @@ public class OpcionEditarEmprendedorController implements Initializable {
             btnGuardar.setOnAction(e -> {
                 try{
                     emprendedor.setEmail(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileEmprendedor(AdministracionEmprendedoresController.emprendedores);
                     App.setRoot("opcionEditarEmprendedor");
                 } catch(IOException a){
                     a.printStackTrace();
@@ -349,6 +355,7 @@ public class OpcionEditarEmprendedorController implements Initializable {
             btnGuardar.setOnAction(e -> {
                 try{
                     emprendedor.setEmail(tfNuevoInfo.getText());
+                    Utilitaria.saveListToFileEmprendedor(AdministracionEmprendedoresController.emprendedores);
                     App.setRoot("opcionEditarEmprendedor");
                 } catch(IOException a){
                     a.printStackTrace();
@@ -421,6 +428,7 @@ public class OpcionEditarEmprendedorController implements Initializable {
                 try{
                     validarTextField2(taNuevoInfo,"descripción");
                     emprendedor.setDescripcion(taNuevoInfo.getText());
+                    Utilitaria.saveListToFileEmprendedor(AdministracionEmprendedoresController.emprendedores);
                     App.setRoot("opcionEditarEmprendedor");
                 } catch(StringVacio sv){
                     mostrarAlerta1(sv.getMessage(),elegido);
@@ -931,6 +939,7 @@ public class OpcionEditarEmprendedorController implements Initializable {
                         redes.add(red);
                     }
                     emprendedor.setRedesSociales(redes);
+                    Utilitaria.saveListToFileEmprendedor(AdministracionEmprendedoresController.emprendedores);
                     App.setRoot("opcionEditarEmprendedor");
 
                 } catch(StringVacio sv){

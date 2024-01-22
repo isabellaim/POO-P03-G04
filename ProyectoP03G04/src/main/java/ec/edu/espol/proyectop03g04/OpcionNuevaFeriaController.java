@@ -148,6 +148,7 @@ public class OpcionNuevaFeriaController implements Initializable {
             validarCantStands(cantidadStands4);
             Feria feria = new Feria(nombre,fechaIni,fechaFin,lugar,descripcion,horario,cantidadStands1,cantidadStands2,cantidadStands3,cantidadStands4);
             AdministracionFeriasController.ferias.add(feria);
+            Utilitaria.saveListToFileFeria(AdministracionFeriasController.ferias);
             App.setRoot("administracionFerias");
                 
         } catch(NumberFormatException nfe){

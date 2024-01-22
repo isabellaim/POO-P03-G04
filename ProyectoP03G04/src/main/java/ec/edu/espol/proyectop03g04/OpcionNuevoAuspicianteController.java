@@ -4,8 +4,11 @@
  */
 package ec.edu.espol.proyectop03g04;
 
+import static ec.edu.espol.proyectop03g04.AdministracionAuspiciantesController.auspiciantes;
+import static ec.edu.espol.proyectop03g04.AdministracionEmprendedoresController.emprendedores;
 import excepciones.FechaNoPuedeSerDespues;
 import excepciones.FechaVacia;
+import excepciones.PersonaConEsaCedula;
 import excepciones.StringVacio;
 import java.io.IOException;
 import java.net.URL;
@@ -27,10 +30,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import modelo.Auspiciante;
+import modelo.Emprendedor;
 import modelo.Feria;
 import modelo.R;
 import modelo.RedSocial;
 import modelo.SC;
+import modelo.Utilitaria;
 /**
  * FXML Controller class
  *
@@ -173,6 +178,16 @@ public class OpcionNuevoAuspicianteController implements Initializable {
         return str;
     }
     
+    private static String recuperarCedula(TextField tf) throws PersonaConEsaCedula{
+        String cedula = tf.getText();
+        for(Auspiciante aus: auspiciantes){
+            if (cedula.equals(aus.getCedula())){
+                throw new PersonaConEsaCedula("Ya existe un Auspiciante con esa cédula o RUC.");
+            }
+        }
+        return cedula;
+    }
+    
     private static String recuperarCuenta(TextField tf) throws StringVacio{
         String str = tf.getText();
         if (str.equals("")){
@@ -265,7 +280,7 @@ public class OpcionNuevoAuspicianteController implements Initializable {
         ArrayList<SC> sectores = new ArrayList<>();
         try{
             nombre = recuperarString(tfNombre);
-            cedula = recuperarString(tfCedula);
+            cedula = recuperarCedula(tfCedula);
             personaRes = recuperarString(tfPersonResponable);
             telefono = recuperarString(tfTelefono);
             email = recuperarString(tfEmail);
@@ -327,10 +342,13 @@ public class OpcionNuevoAuspicianteController implements Initializable {
             
             
             AdministracionAuspiciantesController.auspiciantes.add(new Auspiciante(cedula, nombre, personaRes, telefono, email, direccion, sitioWeb, redes,sectores));
+            Utilitaria.saveListToFileAuspiciante(AdministracionAuspiciantesController.auspiciantes);
             App.setRoot("administracionAuspiciantes");
                 
         } catch(StringVacio sv){
             mostrarAlerta(sv.getMessage());
+        } catch(PersonaConEsaCedula p){
+            mostrarAlerta(p.getMessage());
         } catch(IOException e){
             e.printStackTrace();
         } catch (Exception e){

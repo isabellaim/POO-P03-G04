@@ -27,6 +27,7 @@ import modelo.Emprendedor;
 import modelo.R;
 import modelo.RedSocial;
 import modelo.SC;
+import modelo.Utilitaria;
 
 /**
  * FXML Controller class
@@ -313,6 +314,7 @@ public class OpcionNuevoEmprendedorController implements Initializable {
             }
             
             AdministracionEmprendedoresController.emprendedores.add(new Emprendedor(cedula, nombre, personaRes, telefono, email, direccion, sitioWeb, redes,descripcion));
+            Utilitaria.saveListToFileEmprendedor(AdministracionEmprendedoresController.emprendedores);
             App.setRoot("administracionEmprendedores");
                 
         } catch(StringVacio sv){

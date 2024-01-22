@@ -66,7 +66,7 @@ public class Utilitaria implements Serializable{
         return usuarios;
     }
 
-    public static void saveListToFileEmprendedor (ArrayList<Emprendedor> usuarios)
+    public static void saveListToFileEmprendedor(ArrayList<Emprendedor> usuarios)
     {
         try(ObjectOutputStream out = new ObjectOutputStream (new FileOutputStream(Utilitaria.nameFileEmprendedores)))
         {
