@@ -3,12 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
+import java.io.Serializable;
 import java.util.*;
 /**
  *
  * @author isabella
  */
-public class EmprendedorEnFeria {
+public class EmprendedorEnFeria implements Serializable{
   private Emprendedor emprendedor;
   private Stand standAsignado;
   private String seccion;

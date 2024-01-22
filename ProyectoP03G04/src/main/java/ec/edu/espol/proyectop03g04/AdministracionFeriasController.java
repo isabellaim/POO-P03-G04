@@ -51,7 +51,7 @@ public class AdministracionFeriasController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    public static ArrayList<Feria> ferias = new ArrayList<>();
+    public static ArrayList<Feria> ferias = Utilitaria.readListFromFileFeria();
     @FXML
     private BorderPane bpAdminFerias;
     @FXML

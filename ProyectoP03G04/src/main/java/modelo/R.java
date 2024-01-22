@@ -4,11 +4,13 @@
  */
 package modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author isabella
  */
-public enum R {
+public enum R implements Serializable{
     
     TWITTER, FACEBOOK, INSTAGRAM, TIKTOK, PINTEREST, YOUTUBE, LINKEDIN;
     

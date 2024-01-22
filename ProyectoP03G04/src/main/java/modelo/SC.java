@@ -4,11 +4,13 @@
  */
 package modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author isabella
  */
-public enum SC {
+public enum SC implements Serializable{
     ALIMENTACION, EDUCACION, SALUD, VESTIMENTA;
     public SC[] getValues() {
         return SC.values();

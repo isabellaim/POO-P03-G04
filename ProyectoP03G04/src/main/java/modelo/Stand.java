@@ -4,13 +4,14 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  *
  * @author isabella
  */
-public class Stand {
+public class Stand implements Serializable{
   private String codigoStand;
   private LocalDate fechaAsig;
   private Persona dueno;

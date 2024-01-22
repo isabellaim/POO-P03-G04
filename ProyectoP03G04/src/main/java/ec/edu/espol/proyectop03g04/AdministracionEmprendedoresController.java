@@ -37,7 +37,7 @@ import javafx.scene.control.ScrollPane;
  */
 public class AdministracionEmprendedoresController implements Initializable {
     
-    public static ArrayList<Emprendedor> emprendedores = new ArrayList<>();
+    public static ArrayList<Emprendedor> emprendedores = Utilitaria.readListFromFileEmprendedor();
     @FXML
     private BorderPane bpAdminEmprendedores;
     @FXML

@@ -3,12 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
+import java.io.Serializable;
 import java.util.*;
 /**
  *
  * @author isabella
  */
-public class OrganizacionStands {
+public class OrganizacionStands implements Serializable{
     private int cantStands;
   private ArrayList<Stand> standsPorSeccion;
   private int numSeccion;

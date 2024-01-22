@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
+import java.io.Serializable;
 import java.util.*;
 import java.time.LocalDate;
 
@@ -10,7 +11,7 @@ import java.time.LocalDate;
  *
  * @author isabella
  */
-public class Feria implements Comparable<Feria> {
+public class Feria implements Comparable<Feria>, Serializable {
     private String codigo;
     private String nombre;
     private LocalDate fechaIni;

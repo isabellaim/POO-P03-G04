@@ -44,7 +44,7 @@ public class AdministracionAuspiciantesController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    public static ArrayList<Auspiciante> auspiciantes = new ArrayList<>();
+    public static ArrayList<Auspiciante> auspiciantes = Utilitaria.readListFromFileAuspiciante();
     @FXML
     private BorderPane bpAdminAuspiciantes;
     @FXML

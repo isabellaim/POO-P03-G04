@@ -4,11 +4,13 @@
  */
 package modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author isabella
  */
-public class RedSocial {
+public class RedSocial implements Serializable {
     private String cuenta;
     private R redSocial;
 

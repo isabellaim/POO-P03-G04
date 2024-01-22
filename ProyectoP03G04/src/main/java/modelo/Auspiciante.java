@@ -3,12 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
+import java.io.Serializable;
 import java.util.*;
 /**
  *
  * @author isabella
  */
-public class Auspiciante extends Persona {
+public class Auspiciante extends Persona implements Serializable {
     private ArrayList<SC> sectores;
 
   // Constructor de la clase Auspiciante
